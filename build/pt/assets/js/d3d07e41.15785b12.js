@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([["8818"],{41603(a){a.exports=JSON.parse('{"tag":{"label":"recap","permalink":"/pt/blog/tags/recap","allTagsPath":"/pt/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/pt/blog/tags/recap","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

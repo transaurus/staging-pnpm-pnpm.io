@@ -1,0 +1,45 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/pnpm.js",
+      "destination": "https://get.pnpm.io/v5.js"
+    },
+    {
+      "source": "/pnpm.js.org/:path*",
+      "destination": "https://pnpm.io/js-org-placeholder.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/10.x/:splat*",
+      "destination": "/:splat*",
+      "permanent": false
+    },
+    {
+      "source": "/9.x/:splat*",
+      "destination": "/:splat*",
+      "permanent": true
+    },
+    {
+      "source": "/en/:splat*",
+      "destination": "/:splat*",
+      "permanent": true
+    },
+    {
+      "source": "/v/:splat*",
+      "destination": "https://github.com/pnpm/pnpm/releases/tag/v:splat*",
+      "permanent": true
+    }
+  ]
+}

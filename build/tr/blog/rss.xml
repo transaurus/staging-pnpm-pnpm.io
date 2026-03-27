@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>pnpm Blog</title>
+        <link>https://pnpm.io/tr/blog</link>
+        <description>pnpm Blog</description>
+        <lastBuildDate>Mon, 09 Mar 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>tr</language>
+        <item>
+            <title><![CDATA[pnpm 10.32]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.32</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.32</guid>
+            <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.32 adds an --all flag to pnpm approve-builds for approving all pending builds without interactive prompts.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.32 adds an <code>--all</code> flag to <code>pnpm approve-builds</code> for approving all pending builds without interactive prompts.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.32#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="--all-flag-for-pnpm-approve-builds"><code>--all</code> Flag for <code>pnpm approve-builds</code><a href="https://pnpm.io/tr/blog/releases/10.32#--all-flag-for-pnpm-approve-builds" class="hash-link" aria-label="--all-flag-for-pnpm-approve-builds doğrudan bağlantı" title="--all-flag-for-pnpm-approve-builds doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added <code>--all</code> flag to <code>pnpm approve-builds</code> that approves all pending builds without interactive prompts <a href="https://github.com/pnpm/pnpm/issues/10136" target="_blank" rel="noopener noreferrer">#10136</a>.</p>
+<div class="language-sh codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-sh codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> approve-builds </span><span class="token parameter variable" style="color:#36acaa">--all</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.32#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Reverted change related to setting explicitly the npm config file path, which caused regressions.</li>
+<li>Reverted fix related to <code>lockfile-include-tarball-url</code>. Fixes <a href="https://github.com/pnpm/pnpm/issues/10915" target="_blank" rel="noopener noreferrer">#10915</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.31]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.31</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.31</guid>
+            <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.31 preserves comments and formatting when updating pnpm-workspace.yaml, and includes numerous bug fixes.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.31 preserves comments and formatting when updating <code>pnpm-workspace.yaml</code>, and includes numerous bug fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.31#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="preserving-comments-in-pnpm-workspaceyaml">Preserving Comments in <code>pnpm-workspace.yaml</code><a href="https://pnpm.io/tr/blog/releases/10.31#preserving-comments-in-pnpm-workspaceyaml" class="hash-link" aria-label="preserving-comments-in-pnpm-workspaceyaml doğrudan bağlantı" title="preserving-comments-in-pnpm-workspaceyaml doğrudan bağlantı" translate="no">​</a></h4>
+<p>When pnpm updates the <code>pnpm-workspace.yaml</code>, comments, string formatting, and whitespace will be preserved.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.31#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Added <code>-F</code> as a short alias for the <code>--filter</code> option in the help output.</li>
+<li>Handle undefined pkgSnapshot in <code>pnpm why -r</code> <a href="https://github.com/pnpm/pnpm/issues/10700" target="_blank" rel="noopener noreferrer">#10700</a>.</li>
+<li>Fix headless install not being used when a project has an injected self-referencing <code>file:</code> dependency that resolves to <code>link:</code> in the lockfile.</li>
+<li>Fixed a race condition when multiple worker threads import the same package to the global virtual store concurrently. The rename operation now tolerates <code>ENOTEMPTY</code>/<code>EEXIST</code> errors if another thread already completed the import.</li>
+<li>When <code>lockfile-include-tarball-url</code> is set to <code>false</code>, tarball URLs are now always excluded from the lockfile. Previously, tarball URLs could still appear for packages hosted under non-standard URLs <a href="https://github.com/pnpm/pnpm/issues/6667" target="_blank" rel="noopener noreferrer">#6667</a>.</li>
+<li>Fixed <code>optimisticRepeatInstall</code> skipping install when <code>overrides</code>, <code>packageExtensions</code>, <code>ignoredOptionalDependencies</code>, <code>patchedDependencies</code>, or <code>peersSuffixMaxLength</code> changed.</li>
+<li>Fixed <code>pnpm patch-commit</code> failing with "unable to access '/.config/git/attributes': Permission denied" error in environments where HOME is unset or non-standard (Docker containers, CI systems) <a href="https://github.com/pnpm/pnpm/issues/6537" target="_blank" rel="noopener noreferrer">#6537</a>.</li>
+<li>Fix <code>pnpm why -r --parseable</code> missing dependents when multiple workspace packages share the same dependency <a href="https://github.com/pnpm/pnpm/issues/8100" target="_blank" rel="noopener noreferrer">#8100</a>.</li>
+<li>Fix <code>link-workspace-packages=true</code> incorrectly linking workspace packages when the requested version doesn't match the workspace package's version <a href="https://github.com/pnpm/pnpm/issues/10173" target="_blank" rel="noopener noreferrer">#10173</a>.</li>
+<li>Fixed <code>pnpm update --interactive</code> table breaking with long version strings by dynamically calculating column widths instead of using hardcoded values <a href="https://github.com/pnpm/pnpm/issues/10316" target="_blank" rel="noopener noreferrer">#10316</a>.</li>
+<li>The parameter set by the <code>--allow-build</code> flag is written to <code>allowBuilds</code>.</li>
+<li>Fix a bug in which specifying <code>filter</code> on <code>pnpm-workspace.yaml</code> would cause pnpm to not detect any projects.</li>
+<li>Print help message on running <code>pnpm dlx</code> without arguments and exit.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.30]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.30</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.30</guid>
+            <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.30 redesigns pnpm why to show a reverse dependency tree, making it much easier to understand why a package is installed.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.30 redesigns <code>pnpm why</code> to show a reverse dependency tree, making it much easier to understand why a package is installed.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.30#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="reverse-dependency-tree-in-pnpm-why">Reverse Dependency Tree in <code>pnpm why</code><a href="https://pnpm.io/tr/blog/releases/10.30#reverse-dependency-tree-in-pnpm-why" class="hash-link" aria-label="reverse-dependency-tree-in-pnpm-why doğrudan bağlantı" title="reverse-dependency-tree-in-pnpm-why doğrudan bağlantı" translate="no">​</a></h4>
+<p><code>pnpm why</code> now shows a reverse dependency tree. The searched package appears at the root with its dependents as branches, walking back to workspace roots. This replaces the previous forward-tree output which was noisy and hard to read for deeply nested dependencies.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.30#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Optimize <code>pnpm why</code> and <code>pnpm list</code> performance in workspaces with many importers by sharing the dependency graph and materialization cache across all importers instead of rebuilding them independently for each one <a href="https://github.com/pnpm/pnpm/pull/10596" target="_blank" rel="noopener noreferrer">#10596</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.29]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.29</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.29</guid>
+            <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.29 adds catalog specifier, and includes several bug fixes.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.29 adds <code>catalog:</code> protocol support to <code>pnpm dlx</code>, allows configuring <code>auditLevel</code> in <code>pnpm-workspace.yaml</code>, supports a bare <code>workspace:</code> specifier, and includes several bug fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.29#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="catalog-protocol-in-pnpm-dlx"><code>catalog:</code> Protocol in <code>pnpm dlx</code><a href="https://pnpm.io/tr/blog/releases/10.29#catalog-protocol-in-pnpm-dlx" class="hash-link" aria-label="catalog-protocol-in-pnpm-dlx doğrudan bağlantı" title="catalog-protocol-in-pnpm-dlx doğrudan bağlantı" translate="no">​</a></h4>
+<p>The <code>pnpm dlx</code> / <code>pnpx</code> command now supports the <code>catalog:</code> protocol, allowing you to reference versions defined in your workspace catalogs:</p>
+<div class="language-sh codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-sh codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> dlx shx@catalog:</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="auditlevel-setting"><code>auditLevel</code> Setting<a href="https://pnpm.io/tr/blog/releases/10.29#auditlevel-setting" class="hash-link" aria-label="auditlevel-setting doğrudan bağlantı" title="auditlevel-setting doğrudan bağlantı" translate="no">​</a></h4>
+<p><code>auditLevel</code> can now be configured in the <code>pnpm-workspace.yaml</code> file, so you don't need to pass <code>--audit-level</code> on every <code>pnpm audit</code> invocation <a href="https://github.com/pnpm/pnpm/pull/10540" target="_blank" rel="noopener noreferrer">#10540</a>:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_KdeV">pnpm-workspace.yaml</div><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">auditLevel</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> high</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="bare-workspace-protocol">Bare <code>workspace:</code> Protocol<a href="https://pnpm.io/tr/blog/releases/10.29#bare-workspace-protocol" class="hash-link" aria-label="bare-workspace-protocol doğrudan bağlantı" title="bare-workspace-protocol doğrudan bağlantı" translate="no">​</a></h4>
+<p>A bare <code>workspace:</code> specifier without a version range is now supported. It is treated as <code>workspace:*</code> and resolves to the concrete version during publish <a href="https://github.com/pnpm/pnpm/pull/10436" target="_blank" rel="noopener noreferrer">#10436</a>:</p>
+<div class="language-json codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-json codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"dependencies"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"foo"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"workspace:"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.29#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Fixed an out-of-memory error in <code>pnpm list</code> (and <code>pnpm why</code>) on large dependency graphs by replacing the recursive tree builder with a two-phase approach: a BFS dependency graph followed by cached tree materialization. Duplicate subtrees are now deduplicated in the output <a href="https://github.com/pnpm/pnpm/pull/10586" target="_blank" rel="noopener noreferrer">#10586</a>.</li>
+<li>Fixed <code>allowBuilds</code> not working when set via <code>.pnpmfile.cjs</code> <a href="https://github.com/pnpm/pnpm/issues/10516" target="_blank" rel="noopener noreferrer">#10516</a>.</li>
+<li>When <code>enableGlobalVirtualStore</code> is set, <code>pnpm deploy</code> now ignores it and always creates a localized virtual store within the deploy directory to keep it self-contained.</li>
+<li>Fixed <code>minimumReleaseAgeExclude</code> not being respected by <code>pnpm dlx</code> <a href="https://github.com/pnpm/pnpm/issues/10338" target="_blank" rel="noopener noreferrer">#10338</a>.</li>
+<li>Fixed <code>pnpm list --json</code> returning incorrect paths when using global virtual store <a href="https://github.com/pnpm/pnpm/issues/10187" target="_blank" rel="noopener noreferrer">#10187</a>.</li>
+<li>Fixed <code>pnpm store path</code> and <code>pnpm store status</code> using workspace root for path resolution when <code>storeDir</code> is relative <a href="https://github.com/pnpm/pnpm/issues/10290" target="_blank" rel="noopener noreferrer">#10290</a>.</li>
+<li>Fixed <code>catalogMode: strict</code> writing the literal string <code>catalog:</code> to <code>pnpm-workspace.yaml</code> instead of the resolved version specifier when re-adding an existing catalog dependency <a href="https://github.com/pnpm/pnpm/issues/10176" target="_blank" rel="noopener noreferrer">#10176</a>.</li>
+<li>Skip local <code>file:</code> protocol dependencies during <code>pnpm fetch</code>, fixing Docker builds when local directory dependencies are not available <a href="https://github.com/pnpm/pnpm/issues/10460" target="_blank" rel="noopener noreferrer">#10460</a>.</li>
+<li>Fixed <code>pnpm audit --json</code> to respect the <code>--audit-level</code> setting for both exit code and output filtering <a href="https://github.com/pnpm/pnpm/pull/10540" target="_blank" rel="noopener noreferrer">#10540</a>.</li>
+<li>Updated <code>tar</code> to version 7.5.7 to fix a security vulnerability (<a href="https://www.cve.org/CVERecord?id=CVE-2026-24842" target="_blank" rel="noopener noreferrer">CVE-2026-24842</a>).</li>
+<li>Fixed <code>pnpm audit --fix</code> replacing reference overrides (e.g. <code>$foo</code>) with concrete versions <a href="https://github.com/pnpm/pnpm/issues/10325" target="_blank" rel="noopener noreferrer">#10325</a>.</li>
+<li>Fixed <code>shamefullyHoist</code> set via <code>updateConfig</code> in <code>.pnpmfile.cjs</code> not being converted to <code>publicHoistPattern</code> <a href="https://github.com/pnpm/pnpm/issues/10271" target="_blank" rel="noopener noreferrer">#10271</a>.</li>
+<li><code>pnpm help</code> now correctly reports if the currently running pnpm CLI is bundled with Node.js <a href="https://github.com/pnpm/pnpm/issues/10561" target="_blank" rel="noopener noreferrer">#10561</a>.</li>
+<li>Added a warning when the current directory contains the PATH delimiter character, which can break <code>node_modules/.bin</code> path injection <a href="https://github.com/pnpm/pnpm/issues/10457" target="_blank" rel="noopener noreferrer">#10457</a>.</li>
+<li>Fixed the documentation URL shown in <code>pnpm completion --help</code> to point to the correct page <a href="https://github.com/pnpm/pnpm/issues/10281" target="_blank" rel="noopener noreferrer">#10281</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.28]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.28</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.28</guid>
+            <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.28 introduces a new beforePacking hook to customize package.json at publish time, improves filtered install performance, and includes several bug fixes.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.28 introduces a new <code>beforePacking</code> hook to customize package.json at publish time, improves filtered install performance, and includes several bug fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.28#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="beforepacking-hook"><code>beforePacking</code> Hook<a href="https://pnpm.io/tr/blog/releases/10.28#beforepacking-hook" class="hash-link" aria-label="beforepacking-hook doğrudan bağlantı" title="beforepacking-hook doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added support for a new hook called <code>beforePacking</code> that allows you to customize the <code>package.json</code> contents at publish time <a href="https://github.com/pnpm/pnpm/issues/3816" target="_blank" rel="noopener noreferrer">#3816</a>.</p>
+<p>This hook is called just before creating the tarball when running <code>pnpm pack</code> or <code>pnpm publish</code>. It gives you the opportunity to modify the package manifest that will be included in the published package without affecting your local <code>package.json</code> file.</p>
+<p>Example usage in <code>.pnpmfile.cjs</code>:</p>
+<div class="language-js codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-js codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">module</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">exports</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token literal-property property" style="color:#36acaa">hooks</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token function" style="color:#d73a49">beforePacking</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">pkg</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token comment" style="color:#999988;font-style:italic">// Remove development-only fields</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token keyword" style="color:#00009f">delete</span><span class="token plain"> pkg</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">devDependencies</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token keyword" style="color:#00009f">delete</span><span class="token plain"> pkg</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">scripts</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token comment" style="color:#999988;font-style:italic">// Add publication metadata</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      pkg</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">publishedAt</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Date</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">toISOString</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> pkg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>See the <a href="https://pnpm.io/tr/pnpmfile#hooksbeforepackingpkg-pkg--promisepkg">.pnpmfile.cjs documentation</a> for more details.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="filtered-install-performance">Filtered Install Performance<a href="https://pnpm.io/tr/blog/releases/10.28#filtered-install-performance" class="hash-link" aria-label="Filtered Install Performance doğrudan bağlantı" title="Filtered Install Performance doğrudan bağlantı" translate="no">​</a></h4>
+<p>In some cases, a filtered install (i.e. <code>pnpm install --filter ...</code>) was slower than running <code>pnpm install</code> without any filter arguments. This performance regression is now fixed. Filtered installs should be as fast or faster than a full install <a href="https://github.com/pnpm/pnpm/pull/10408" target="_blank" rel="noopener noreferrer">#10408</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.28#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Do not add a symlink to the project into the store's project registry if the store is in a subdirectory of the project <a href="https://github.com/pnpm/pnpm/issues/10411" target="_blank" rel="noopener noreferrer">#10411</a>.</li>
+<li>It should be possible to declare the <code>requiredScripts</code> setting in <code>pnpm-workspace.yaml</code> <a href="https://github.com/pnpm/pnpm/issues/10261" target="_blank" rel="noopener noreferrer">#10261</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.27]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.27</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.27</guid>
+            <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.27 adds a new setting to ignore trust policy checks for older package versions, introduces a project registry for global virtual store pruning, and includes several bug fixes.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.27 adds a new setting to ignore trust policy checks for older package versions, introduces a project registry for global virtual store pruning, and includes several bug fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.27#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="trustpolicyignoreafter"><code>trustPolicyIgnoreAfter</code><a href="https://pnpm.io/tr/blog/releases/10.27#trustpolicyignoreafter" class="hash-link" aria-label="trustpolicyignoreafter doğrudan bağlantı" title="trustpolicyignoreafter doğrudan bağlantı" translate="no">​</a></h4>
+<p>Adding <code>trustPolicyIgnoreAfter</code> allows you to ignore trust policy checks for packages published more than a specified time ago <a href="https://github.com/pnpm/pnpm/issues/10352" target="_blank" rel="noopener noreferrer">#10352</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="global-virtual-store-improvements">Global Virtual Store Improvements<a href="https://pnpm.io/tr/blog/releases/10.27#global-virtual-store-improvements" class="hash-link" aria-label="Global Virtual Store Improvements doğrudan bağlantı" title="Global Virtual Store Improvements doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added project registry for global virtual store prune support.</p>
+<p>Projects using the store are now registered via symlinks in <code>{storeDir}/v10/projects/</code>. This enables <code>pnpm store prune</code> to track which packages are still in use by active projects and safely remove unused packages from the global virtual store.</p>
+<p><strong>Semi-breaking.</strong> Changed the location of unscoped packages in the virtual global store. They will now be stored under a directory named <code>@</code> to maintain a uniform 4-level directory depth.</p>
+<p>Added mark-and-sweep garbage collection for global virtual store.</p>
+<p><code>pnpm store prune</code> now removes unused packages from the global virtual store's <code>links/</code> directory. The algorithm:</p>
+<ol>
+<li>Scans all registered projects for symlinks pointing to the store</li>
+<li>Walks transitive dependencies to mark reachable packages</li>
+<li>Removes any package directories not marked as reachable</li>
+</ol>
+<p>This includes support for workspace monorepos - all <code>node_modules</code> directories within a project (including those in workspace packages) are scanned.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.27#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Throw an error if the value of the <code>tokenHelper</code> or <code>&lt;url&gt;:tokenHelper</code> setting contains an environment variable.</li>
+<li>Git dependencies with build scripts should respect the <code>dangerouslyAllowAllBuilds</code> settings <a href="https://github.com/pnpm/pnpm/issues/10376" target="_blank" rel="noopener noreferrer">#10376</a>.</li>
+<li>Skip the package manager check when running with --global and a project packageManager is configured, and warn that the check is skipped.</li>
+<li><code>pnpm store prune</code> should not fail if the dlx cache directory has files, not only directories <a href="https://github.com/pnpm/pnpm/pull/10384" target="_blank" rel="noopener noreferrer">#10384</a></li>
+<li>Fixed a bug (<a href="https://github.com/pnpm/pnpm/issues/9759" target="_blank" rel="noopener noreferrer">#9759</a>) where <code>pnpm add</code> would incorrectly modify a catalog entry in <code>pnpm-workspace.yaml</code> to its exact version.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[🚀 pnpm in 2025]]></title>
+            <link>https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025</link>
+            <guid>https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025</guid>
+            <pubDate>Mon, 29 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[2025 has been a transformative year for pnpm. While our primary focus was redefining the security model of package management, we also delivered significant improvements in performance and developer experience.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>2025 has been a transformative year for pnpm. While our primary focus was redefining the security model of package management, we also delivered significant improvements in performance and developer experience.</p>
+<p>From blocking lifecycle scripts by default to introducing a global virtual store, here is a look back at the major features shipped in 2025.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="usage">Usage<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#usage" class="hash-link" aria-label="Usage doğrudan bağlantı" title="Usage doğrudan bağlantı" translate="no">​</a></h2>
+<p>According to <a href="https://npm-stat.com/charts.html?package=pnpm&amp;from=2016-12-01&amp;to=2025-12-29" target="_blank" rel="noopener noreferrer">download stats</a> pnpm was downloaded 2 times more than in 2024!</p>
+<p><img decoding="async" loading="lazy" src="https://pnpm.io/tr/assets/images/download-stats-2025-bc5a6c1e5b99cc9ed041229899d563f7.png" width="1990" height="758" class="img_M8jV"></p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="redesign-of-the-homepage">Redesign of the Homepage<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#redesign-of-the-homepage" class="hash-link" aria-label="Redesign of the Homepage doğrudan bağlantı" title="Redesign of the Homepage doğrudan bağlantı" translate="no">​</a></h2>
+<p>You may have noticed that we have redesigned our homepage! This redesign was made possible by our most prominent sponsor, <a href="https://bit.cloud/" target="_blank" rel="noopener noreferrer">Bit.cloud</a>.</p>
+<p>The new homepage is now built with <a href="https://bit.cloud/pnpm/website" target="_blank" rel="noopener noreferrer">Bit components</a> and much of the work was done using Bit's AI agent: <a href="https://bit.cloud/products/hope-ai" target="_blank" rel="noopener noreferrer">Hope AI</a>. We even have our own <a href="https://bit.cloud/pnpm/design" target="_blank" rel="noopener noreferrer">design system now</a>.</p>
+<div class="theme-admonition theme-admonition-info admonition_g_IF alert alert--info"><div class="admonitionHeading_Ll6V"><span class="admonitionIcon_pyky"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>bilgi</div><div class="admonitionContent_e01q"><p>I work full time at Bit on dependency management. Under the hood Bit <a href="https://github.com/teambit/bit/blob/9de9a2bce5183d79ee805c4fba3c3386e9384eac/workspace.jsonc#L52-L80" target="_blank" rel="noopener noreferrer">uses pnpm for installation</a>.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="presentation-at-jsnation">Presentation at JSNation<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#presentation-at-jsnation" class="hash-link" aria-label="Presentation at JSNation doğrudan bağlantı" title="Presentation at JSNation doğrudan bağlantı" translate="no">​</a></h2>
+<p>This year was a huge milestone for me personally as I had my first ever live presentation at a big international conference: JSNation in June in Amsterdam. I would like to thank the JSNation team for this great opportunity!</p>
+<p><img decoding="async" loading="lazy" src="https://pnpm.io/tr/assets/images/jsnation-2025-e3a119ab673869a6dc5a2e2cd172487e.jpg" width="2048" height="1366" class="img_M8jV"></p>
+<p>I was pleasantly surprised how well known pnpm is in the community and how many people use it at their work!</p>
+<p>My presentation was about <a href="https://pnpm.io/tr/config-dependencies">config dependencies</a> and you can see the recording <a href="https://gitnation.com/contents/configurational-dependencies-in-pnpm" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="feature-highlights">Feature Highlights<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#feature-highlights" class="hash-link" aria-label="Feature Highlights doğrudan bağlantı" title="Feature Highlights doğrudan bağlantı" translate="no">​</a></h2>
+<p>Now, let’s dive into the most significant changes shipped in pnpm v10 throughout 2025.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="security-by-default">Security by Default<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#security-by-default" class="hash-link" aria-label="Security by Default doğrudan bağlantı" title="Security by Default doğrudan bağlantı" translate="no">​</a></h3>
+<p>The most significant shift this year was pnpm's move to "Security by Default." In pnpm v10.0, we stopped implicitly trusting installed packages.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="blocking-lifecycle-scripts-v100">Blocking Lifecycle Scripts (<a href="https://github.com/pnpm/pnpm/releases/tag/v10.0.0" target="_blank" rel="noopener noreferrer">v10.0</a>)<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#blocking-lifecycle-scripts-v100" class="hash-link" aria-label="blocking-lifecycle-scripts-v100 doğrudan bağlantı" title="blocking-lifecycle-scripts-v100 doğrudan bağlantı" translate="no">​</a></h4>
+<p>For years, <code>pnpm install</code> meant trusting the entire dependency tree to execute arbitrary code. In v10, we turned this off. pnpm no longer runs <code>preinstall</code> or <code>postinstall</code> scripts by default, eliminating a massive class of supply chain attack vectors.</p>
+<p>To refine this control, we introduced <a href="https://pnpm.io/tr/settings#allowbuilds"><code>allowBuilds</code></a> in <a href="https://pnpm.io/tr/blog/releases/10.26">v10.26</a>, replacing the earlier <code>onlyBuiltDependencies</code> with a more flexible configuration:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">allowBuilds</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">esbuild</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic"># Only allow specific versions</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">nx@21.6.4</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="defense-in-depth-v1016--v1021">Defense in Depth (<a href="https://pnpm.io/tr/blog/releases/10.16">v10.16</a> &amp; <a href="https://pnpm.io/tr/blog/releases/10.21">v10.21</a>)<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#defense-in-depth-v1016--v1021" class="hash-link" aria-label="defense-in-depth-v1016--v1021 doğrudan bağlantı" title="defense-in-depth-v1016--v1021 doğrudan bağlantı" translate="no">​</a></h4>
+<p>We didn't stop at scripts. We added layers of defense to catch malicious packages <em>before</em> they even reach your disk:</p>
+<ul>
+<li><strong><a href="https://pnpm.io/tr/settings#minimumreleaseage"><code>minimumReleaseAge</code></a></strong>: Blocks "zero-day" releases (e.g., packages younger than 24 hours), giving the community time to flag malicious updates.</li>
+<li><strong><a href="https://pnpm.io/tr/settings#trustpolicy"><code>trustPolicy: no-downgrade</code></a></strong>: Prevents installing updates that have weaker provenance than previous versions (e.g., a version published without CI/CD verification).</li>
+<li><strong><a href="https://pnpm.io/tr/settings#blockexoticsubdeps"><code>blockExoticSubdeps</code></a></strong>: Prevents trusted dependencies from pulling in transitive dependencies from untrusted sources.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="global-virtual-store-v1012">Global Virtual Store (<a href="https://github.com/pnpm/pnpm/releases/tag/v10.12.1" target="_blank" rel="noopener noreferrer">v10.12</a>)<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#global-virtual-store-v1012" class="hash-link" aria-label="global-virtual-store-v1012 doğrudan bağlantı" title="global-virtual-store-v1012 doğrudan bağlantı" translate="no">​</a></h3>
+<p>One of pnpm's original innovations was the content-addressable store, which saved disk space by deduplicating files. In v10.12, we took this a step further with the <strong><a href="https://pnpm.io/tr/settings#enableglobalvirtualstore">Global Virtual Store</a></strong>.</p>
+<p>Previously, projects had their own <code>node_modules</code> structure. With <code>enableGlobalVirtualStore: true</code>, pnpm can now link dependencies from a central location on disk directly into your project. This means:</p>
+<ol>
+<li><strong>Massive Disk Savings</strong>: Identical dependency graphs are shared across projects.</li>
+<li><strong>Faster Installs</strong>: If you have 10 projects using <code>react@19</code>, pnpm only needs to link it once globally.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="native-jsr-support-v109">Native JSR Support (<a href="https://github.com/pnpm/pnpm/releases/tag/v10.9.0" target="_blank" rel="noopener noreferrer">v10.9</a>)<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#native-jsr-support-v109" class="hash-link" aria-label="native-jsr-support-v109 doğrudan bağlantı" title="native-jsr-support-v109 doğrudan bağlantı" translate="no">​</a></h3>
+<p>We embraced the new JSR registry with native support. You can now install packages directly from <a href="https://pnpm.io/tr/package-sources#jsr-registry">JSR</a> using the <code>jsr:</code> protocol:</p>
+<div class="language-bash codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-bash codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">add</span><span class="token plain"> jsr:@std/collections</span><br></span></code></pre></div></div>
+<p>This maps correctly in <code>package.json</code> and handles the unique resolution rules of JSR packages seamlessly alongside your npm dependencies.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="config-dependencies-v100">Config Dependencies (v10.0)<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#config-dependencies-v100" class="hash-link" aria-label="Config Dependencies (v10.0) doğrudan bağlantı" title="Config Dependencies (v10.0) doğrudan bağlantı" translate="no">​</a></h3>
+<p>For monorepos and complex setups, we introduced <strong><a href="https://pnpm.io/tr/config-dependencies">Config Dependencies</a></strong>. This feature allows you to share and centralize pnpm configuration—like hooks, patches, and build permissions—across multiple projects.</p>
+<p>Config dependencies are installed into <code>node_modules/.pnpm-config</code> <em>before</em> the main dependency graph is resolved. This means you can use them to:</p>
+<ul>
+<li>Share <code>.pnpmfile.cjs</code> hooks across repositories.</li>
+<li>Centralize patch files for <code>patchedDependencies</code>.</li>
+<li>Maintain a shared list of packages that are allowed to execute build scripts for <code>allowBuilds</code>.</li>
+</ul>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_KdeV">pnpm-workspace.yaml</div><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">configDependencies</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">pnpm-plugin-my-company</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"1.0.0+sha512-..."</span><br></span></code></pre></div></div>
+<p>This ensures your pnpm configuration is versioned, consistent, and available exactly when the package manager needs it.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="automatic-javascript-runtime-management-v1014--v1021">Automatic JavaScript Runtime Management (v10.14 &amp; v10.21)<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#automatic-javascript-runtime-management-v1014--v1021" class="hash-link" aria-label="Automatic JavaScript Runtime Management (v10.14 &amp; v10.21) doğrudan bağlantı" title="Automatic JavaScript Runtime Management (v10.14 &amp; v10.21) doğrudan bağlantı" translate="no">​</a></h3>
+<p>We have supported Node.js runtime management for a while now. In 2025, we extended this to support other runtimes like Deno and Bun.</p>
+<p>You can now specify the required runtime in <code>package.json</code> via <a href="https://pnpm.io/tr/package_json#devenginesruntime"><code>devEngines.runtime</code></a>:</p>
+<div class="language-json codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_KdeV">package.json</div><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-json codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"devEngines"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"runtime"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"node"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"version"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"24.6.0"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>pnpm will automatically download and use that specific version of the runtime for running scripts in that project. This makes "Works on my machine" a thing of the past—everyone on the team uses the exact same runtime, managed entirely by pnpm.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="looking-ahead">Looking Ahead<a href="https://pnpm.io/tr/blog/2025/12/29/pnpm-in-2025#looking-ahead" class="hash-link" aria-label="Looking Ahead doğrudan bağlantı" title="Looking Ahead doğrudan bağlantı" translate="no">​</a></h2>
+<p>We have already started working on pnpm v11.0, which has some noticeable performance improvements. The global virtual store will not yet be enabled by default. We will work on bug fixes and missing features to potentially enable it by default in a future major release.</p><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>recap</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.26]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.26</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.26</guid>
+            <pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.26 introduces stricter security defaults for git-hosted dependencies, adds allowBuilds for granular script permissions, and includes a new setting to block exotic transitive dependencies.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.26 introduces stricter security defaults for git-hosted dependencies, adds <code>allowBuilds</code> for granular script permissions, and includes a new setting to block exotic transitive dependencies.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.26#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="stricter-git-dependency-security">Stricter Git Dependency Security<a href="https://pnpm.io/tr/blog/releases/10.26#stricter-git-dependency-security" class="hash-link" aria-label="Stricter Git Dependency Security doğrudan bağlantı" title="Stricter Git Dependency Security doğrudan bağlantı" translate="no">​</a></h4>
+<p><strong>Semi-breaking.</strong> Git-hosted dependencies are now blocked from running <code>prepare</code> scripts during installation unless they are explicitly allowed in <code>onlyBuiltDependencies</code> (or <code>allowBuilds</code>) <a href="https://github.com/pnpm/pnpm/pull/10288" target="_blank" rel="noopener noreferrer">#10288</a>. This change prevents malicious code execution from untrusted git repositories.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="allowbuilds"><code>allowBuilds</code><a href="https://pnpm.io/tr/blog/releases/10.26#allowbuilds" class="hash-link" aria-label="allowbuilds doğrudan bağlantı" title="allowbuilds doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added a new setting <code>allowBuilds</code> which provides a flexible way to manage build scripts. It accepts a map of package matchers to explicitly allow (<code>true</code>) or disallow (<code>false</code>) script execution. This replaces <code>onlyBuiltDependencies</code> and <code>ignoredBuiltDependencies</code> as the preferred configuration method <a href="https://github.com/pnpm/pnpm/pull/10311" target="_blank" rel="noopener noreferrer">#10311</a>.</p>
+<p>Example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">allowBuilds</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">esbuild</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">core-js</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">nx@21.6.4 || 21.6.5</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="blockexoticsubdeps"><code>blockExoticSubdeps</code><a href="https://pnpm.io/tr/blog/releases/10.26#blockexoticsubdeps" class="hash-link" aria-label="blockexoticsubdeps doğrudan bağlantı" title="blockexoticsubdeps doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added a new setting <code>blockExoticSubdeps</code> to improve supply chain security. When set to <code>true</code>, it prevents the resolution of exotic protocols (like <code>git+ssh:</code> or direct <code>https:</code> tarballs) in transitive dependencies. Only direct dependencies are allowed to use exotic sources <a href="https://github.com/pnpm/pnpm/pull/10265" target="_blank" rel="noopener noreferrer">#10265</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="integrity-hash-for-http-tarballs">Integrity Hash for HTTP Tarballs<a href="https://pnpm.io/tr/blog/releases/10.26#integrity-hash-for-http-tarballs" class="hash-link" aria-label="Integrity Hash for HTTP Tarballs doğrudan bağlantı" title="Integrity Hash for HTTP Tarballs doğrudan bağlantı" translate="no">​</a></h4>
+<p><strong>Semi-breaking.</strong> pnpm now computes the integrity hash for HTTP tarball dependencies when fetching them and stores it in the lockfile. This ensures that servers cannot serve altered content on subsequent installs without detection <a href="https://github.com/pnpm/pnpm/pull/10287" target="_blank" rel="noopener noreferrer">#10287</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="pnpm-pack---dry-run"><code>pnpm pack --dry-run</code><a href="https://pnpm.io/tr/blog/releases/10.26#pnpm-pack---dry-run" class="hash-link" aria-label="pnpm-pack---dry-run doğrudan bağlantı" title="pnpm-pack---dry-run doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added support for <code>--dry-run</code> to the <code>pack</code> command. This allows you to verify which files would be included in the tarball without actually creating it <a href="https://github.com/pnpm/pnpm/issues/10301" target="_blank" rel="noopener noreferrer">#10301</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.26#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Show deprecation in table/list formats when latest version is deprecated <a href="https://github.com/pnpm/pnpm/issues/8658" target="_blank" rel="noopener noreferrer">#8658</a>.</li>
+<li>Remove the <code>injectWorkspacePackages</code> setting from the lockfile on the <code>deploy</code> command <a href="https://github.com/pnpm/pnpm/pull/10294" target="_blank" rel="noopener noreferrer">#10294</a>.</li>
+<li>Normalize the tarball URLs before saving them to the lockfile <a href="https://github.com/pnpm/pnpm/pull/10273" target="_blank" rel="noopener noreferrer">#10273</a>.</li>
+<li>Fix URL normalization for redirected immutable dependencies <a href="https://github.com/pnpm/pnpm/pull/10197" target="_blank" rel="noopener noreferrer">#10197</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.25]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.25</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.25</guid>
+            <pubDate>Mon, 08 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm 10.25 improves certificate handling, adds a bare pnpm init, and ships several quality-of-life fixes.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm 10.25 improves certificate handling, adds a bare <code>pnpm init</code>, and ships several quality-of-life fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.25#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="per-registry-certificates">Per-registry certificates<a href="https://pnpm.io/tr/blog/releases/10.25#per-registry-certificates" class="hash-link" aria-label="Per-registry certificates doğrudan bağlantı" title="Per-registry certificates doğrudan bağlantı" translate="no">​</a></h4>
+<p>You can now load inline certificates from the <code>cert</code>, <code>ca</code>, and <code>key</code> settings for specific registry URLs (for example, <code>//registry.example.com/:ca=-----BEGIN CERTIFICATE-----...</code>). Previously, pnpm only respected the <code>certfile</code>, <code>cafile</code>, and <code>keyfile</code> entries. This aligns pnpm with npm's <code>.npmrc</code> behavior <a href="https://github.com/pnpm/pnpm/pull/10230" target="_blank" rel="noopener noreferrer">#10230</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="pnpm-init---bare"><code>pnpm init --bare</code><a href="https://pnpm.io/tr/blog/releases/10.25#pnpm-init---bare" class="hash-link" aria-label="pnpm-init---bare doğrudan bağlantı" title="pnpm-init---bare doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added a <code>--bare</code> flag to <code>pnpm init</code> for creating a <code>package.json</code> with only the required fields <a href="https://github.com/pnpm/pnpm/issues/10226" target="_blank" rel="noopener noreferrer">#10226</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.25#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Improved reporting of ignored dependency scripts <a href="https://github.com/pnpm/pnpm/pull/10276" target="_blank" rel="noopener noreferrer">#10276</a>.</li>
+<li><code>pnpm install</code> now builds any dependencies that were added to <code>onlyBuiltDependencies</code> but have not run their builds yet <a href="https://github.com/pnpm/pnpm/pull/10256" target="_blank" rel="noopener noreferrer">#10256</a>.</li>
+<li><code>pnpm publish -r --force</code> will publish even if the version already exists in the registry, matching the intent of the flag <a href="https://github.com/pnpm/pnpm/issues/10272" target="_blank" rel="noopener noreferrer">#10272</a>.</li>
+<li>Avoid <code>ERR_PNPM_MISSING_TIME</code> errors when a package excluded from trust policy checks lacks the <code>time</code> field in its metadata.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[How We're Protecting Our Newsroom from npm Supply Chain Attacks]]></title>
+            <link>https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security</link>
+            <guid>https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security</guid>
+            <pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[We got lucky with Shai-Hulud 2.0.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>We got lucky with Shai-Hulud 2.0.</p>
+<p>In November 2025, a self-replicating npm worm <a href="https://securitylabs.datadoghq.com/articles/shai-hulud-2.0-npm-worm/" target="_blank" rel="noopener noreferrer">compromised 796 packages</a> with 132 million monthly downloads. The attack used preinstall scripts to steal credentials, install persistent backdoors, and in some cases wipe entire developer environments. We weren't affected—not because we had robust defenses, but because we didn't run <code>npm install</code> or <code>npm update</code> during the attack window.</p>
+<p>Luck isn't a security strategy.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="who-we-are">Who We Are<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#who-we-are" class="hash-link" aria-label="Who We Are doğrudan bağlantı" title="Who We Are doğrudan bağlantı" translate="no">​</a></h2>
+<p>I'm Ryan Sobol, Principal Software Engineer at the Seattle Times. We've been using npm as our default package manager for years, with some brief experimentation with Yarn that never gained traction. Now we're piloting pnpm specifically for its client-side security controls that complement the registry-level improvements npm has been rolling out.</p>
+<p>Trust is paramount for news organizations, especially these days. A supply chain compromise could expose customer data, employee credentials, production infrastructure, and source code—all things that could take weeks to recover from and potentially require breach notifications to our readers. We understand how expensive these incidents can be in both time and money. That's a path we don't want to go down.</p>
+<p>Despite the organizational inertia that comes with sticking to npm, we think pnpm has a real chance here. It's a true drop-in replacement—same commands, same workflows, same registry. That makes the transition achievable in a way previous alternatives weren't.</p>
+<p>This isn't a polished case study. It's a real-world data point from a team that's just starting to figure out supply chain security. The challenges we're encountering and how we're thinking about these controls might be useful as you consider implementing them yourself.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="why-client-side-controls-matter">Why Client-Side Controls Matter<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#why-client-side-controls-matter" class="hash-link" aria-label="Why Client-Side Controls Matter doğrudan bağlantı" title="Why Client-Side Controls Matter doğrudan bağlantı" translate="no">​</a></h2>
+<p>npm has made tremendous progress on supply chain security. <a href="https://docs.npmjs.com/trusted-publishers/" target="_blank" rel="noopener noreferrer">Trusted publishing</a>, <a href="https://docs.npmjs.com/generating-provenance-statements/" target="_blank" rel="noopener noreferrer">provenance attestations</a>, and <a href="https://docs.npmjs.com/about-access-tokens/" target="_blank" rel="noopener noreferrer">granular access tokens</a> are all significant improvements that make it substantially harder to publish malicious packages after compromising maintainer accounts.</p>
+<p>But here's the gap: these registry improvements protect the <em><strong>publishing</strong></em> side. They don't prevent <em><strong>consuming</strong></em> malicious packages.</p>
+<p>When you run <code>npm install</code> or <code>npm update</code>, lifecycle scripts (e.g., preinstall and postinstall) execute arbitrary code from the internet with full developer privileges—before the package has been evaluated for safety. These scripts can access your credentials (npm, GitHub, AWS, databases), your source code, your cloud infrastructure, and your entire filesystem.</p>
+<p>This is the fundamental vulnerability that attacks like Shai-Hulud exploit. Even with these registry improvements, if a legitimate maintainer's account is compromised, attackers can publish a version with malicious lifecycle scripts that execute immediately upon installation—before the community detects the compromise.</p>
+<p>That's why we felt we needed defense on both sides: npm's improvements make it harder to <em><strong>publish</strong></em> malicious packages; pnpm's client-side controls make it harder to <em><strong>consume</strong></em> them. These approaches are complementary, not competitive. pnpm uses npm's registry and benefits from all of npm's security improvements while adding an additional layer of protection on the client side.</p>
+<p>This is defense-in-depth.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="the-three-layers-were-using">The Three Layers We're Using<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#the-three-layers-were-using" class="hash-link" aria-label="The Three Layers We're Using doğrudan bağlantı" title="The Three Layers We're Using doğrudan bağlantı" translate="no">​</a></h2>
+<p>For our pilot, we're using three pnpm security controls that work together. Each control addresses a different attack vector, and each has escape hatches for legitimate exceptions. We knew going in that we'd need those exceptions—the real world is messy.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="control-1-lifecycle-script-management">Control 1: Lifecycle Script Management<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#control-1-lifecycle-script-management" class="hash-link" aria-label="Control 1: Lifecycle Script Management doğrudan bağlantı" title="Control 1: Lifecycle Script Management doğrudan bağlantı" translate="no">​</a></h3>
+<p>One of the main reasons we considered pnpm was learning that it <strong>blocks lifecycle scripts by default</strong>. Unlike other package managers, it doesn't implicitly trust and execute arbitrary code from packages.</p>
+<p>In practice, when a package has preinstall or postinstall scripts, pnpm blocks them but installation continues with a warning. This already provides significant protection—malicious scripts won't execute without you explicitly allowing them. However, we were concerned that warnings would be too easy to ignore, especially since installation appears to succeed. We wanted stricter control with <code>strictDepBuilds: true</code>:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_KdeV">pnpm-workspace.yaml</div><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">strictDepBuilds</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">onlyBuiltDependencies</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> package</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">with</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">necessary</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">build</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">scripts</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">ignoredBuiltDependencies</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> package</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">with</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">unnecessary</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">build</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">scripts</span><br></span></code></pre></div></div>
+<p>By "necessary," we mean packages that genuinely need their lifecycle scripts to function—things like native extensions that compile from source or database drivers that link against platform-specific libraries. By "unnecessary," we mean scripts that are optional optimizations or setup steps that don't affect whether the package functions in our use case.</p>
+<p>With <code>strictDepBuilds: true</code>, installation fails immediately when it encounters lifecycle scripts, forcing us to:</p>
+<ol>
+<li>Identify which packages have lifecycle scripts—pnpm tells you exactly which ones</li>
+<li>Research what each script does, which can be as easy as feeding the self-contained preinstall or postinstall script into a generative AI for interpretation</li>
+<li>Use human judgment to make a conscious, documented decision about whether to allow or block it</li>
+</ol>
+<p>For our team, this ensures we're making deliberate choices upfront rather than potentially discovering issues later.</p>
+<p><strong>Note:</strong> The pnpm team is considering making <code>strictDepBuilds: true</code> the default behavior in v11, and is also exploring clearer naming for the allow/deny syntax based on feedback from teams implementing these controls in practice.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="control-2-release-cooldown">Control 2: Release Cooldown<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#control-2-release-cooldown" class="hash-link" aria-label="Control 2: Release Cooldown doğrudan bağlantı" title="Control 2: Release Cooldown doğrudan bağlantı" translate="no">​</a></h3>
+<p>This control blocks installation of package versions published within a cooldown period. The idea is to give the community time to detect and remove malicious packages before they reach your environment.</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_KdeV">pnpm-workspace.yaml</div><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">minimumReleaseAge</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> &lt;duration</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">in</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">minutes</span><span class="token punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">minimumReleaseAgeExclude</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> package</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">with</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">critical</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">hotfix@1.2.3</span><br></span></code></pre></div></div>
+<p><strong>Our mindset shift:</strong> We had to retrain ourselves to stop thinking "newest is best." What we're learning is that from a supply chain security perspective, that's not always the case—slightly older can often be safer. A package that's been available for a period of time gives the community and security researchers time to detect potential issues.</p>
+<p>Looking at recent attacks, malicious packages have been detected and removed in varying timeframes. The <a href="https://www.wiz.io/blog/widespread-npm-supply-chain-attack-breaking-down-impact-scope-across-debug-chalk" target="_blank" rel="noopener noreferrer">September 2025 npm supply chain attack</a> that compromised debug, chalk, and 16 other packages saw removal within about 2.5 hours, while <a href="https://securitylabs.datadoghq.com/articles/shai-hulud-2.0-npm-worm/" target="_blank" rel="noopener noreferrer">Shai-Hulud 2.0</a> (November 2025) took about 12 hours. Every attack is different and every recovery timeline will vary, but the appropriate cooldown period depends on your organization's risk tolerance—it could be measured in hours, days, or weeks. Either way, a cooldown period would have blocked these attacks.</p>
+<p><strong>The trade-off we accepted:</strong> Given the scale of our organization and our priorities, we're not always on the absolute latest versions of packages—despite best efforts. So this cooldown policy aligns more with our reality than it disrupts it. When we genuinely need a newer version (critical security patches, breaking bugs), we can temporarily exempt it after review.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="control-3-trust-policy">Control 3: Trust Policy<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#control-3-trust-policy" class="hash-link" aria-label="Control 3: Trust Policy doğrudan bağlantı" title="Control 3: Trust Policy doğrudan bağlantı" translate="no">​</a></h3>
+<p>This control blocks installation when a package version has weaker authentication than previously published versions—often a sign that an attacker compromised maintainer credentials and published from their own machine instead of the official CI/CD pipeline.</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_KdeV">pnpm-workspace.yaml</div><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">trustPolicy</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> no</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">downgrade</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">trustPolicyExclude</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> package</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">that</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">migrated</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">cicd@1.2.3</span><br></span></code></pre></div></div>
+<p><strong>How it works:</strong> npm tracks three trust levels for published packages (strongest to weakest):</p>
+<ol>
+<li><strong>Trusted Publisher:</strong> Published via GitHub Actions with OIDC tokens and npm provenance</li>
+<li><strong>Provenance:</strong> Signed attestation from a CI/CD system</li>
+<li><strong>No Trust Evidence:</strong> Published with username/password or token authentication</li>
+</ol>
+<p>If a newer version has weaker authentication than an older version, installation fails. For example, if v1.0.0 was published with Trusted Publisher but v1.0.1 was published with basic auth, pnpm blocks v1.0.1.</p>
+<p>In the <a href="https://www.wiz.io/blog/s1ngularity-supply-chain-attack" target="_blank" rel="noopener noreferrer">s1ngularity attack</a> in August 2025, attackers compromised maintainer credentials and published malicious versions from their own machines. Because they didn't have CI/CD access, the malicious versions had no provenance—a clear trust downgrade. This control would have blocked installation.</p>
+<p><strong>When trust downgrades might be legitimate:</strong> New maintainer who hasn't set up provenance yet, CI/CD system migration, emergency hotfix published manually while CI/CD was down. In these cases, we'd investigate why the trust level decreased, verify it's safe, then add to <code>trustPolicyExclude</code>.</p>
+<p><strong>Note:</strong> This feature was added to pnpm in November 2025 and is quite new. We're still learning how often legitimate trust downgrades occur in practice.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="how-they-work-together-the-react-example">How They Work Together: The React Example<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#how-they-work-together-the-react-example" class="hash-link" aria-label="How They Work Together: The React Example doğrudan bağlantı" title="How They Work Together: The React Example doğrudan bağlantı" translate="no">​</a></h2>
+<p>We don't see any of these controls as a silver bullet. They work as layers of defense—when we need to make an exception for one control, the other layers continue protecting us.</p>
+<p>Let's look at a real scenario: the <a href="https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components" target="_blank" rel="noopener noreferrer">critical React vulnerability</a> disclosed in December 2025.</p>
+<p>This was a serious security issue that required immediate patching. Normally, our release cooldown would prevent us from installing a package version published so recently. But this was a critical security patch—we couldn't wait.</p>
+<p>Here's how the layered defense would work in this scenario:</p>
+<p><strong>What you'd do:</strong> Add the specific React version to <code>minimumReleaseAgeExclude</code> after reviewing the vulnerability disclosure and verifying the patch was legitimate.</p>
+<p><strong>What still protects you:</strong></p>
+<ul>
+<li><strong>Lifecycle Script Management</strong> is still active—if an attacker had injected malicious lifecycle scripts into the React patch, they would be blocked (React normally has no lifecycle scripts, so any scripts would be immediately suspicious)</li>
+<li><strong>Trust Policy</strong> is still active—if an attacker had compromised React's publishing credentials and pushed a malicious "patch" from their own machine, the trust downgrade would be blocked</li>
+</ul>
+<p>This is why we think exceptions are expected and okay. You make a conscious, documented decision to bypass one control for a legitimate reason, but you still have robust protection from the other layers. No single point of failure.</p>
+<p>This is what defense-in-depth looks like in practice for us.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="our-pilot-experience">Our Pilot Experience<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#our-pilot-experience" class="hash-link" aria-label="Our Pilot Experience doğrudan bağlantı" title="Our Pilot Experience doğrudan bağlantı" translate="no">​</a></h2>
+<p>We implemented all three security controls in one of our backend services as a proof of concept. Total setup time: a few hours to research, understand, and define our approach.</p>
+<p>During setup, pnpm identified three packages with lifecycle scripts:</p>
+<ul>
+<li><strong>esbuild:</strong> Optimizes CLI tool startup by milliseconds—not needed since we only use the JavaScript API</li>
+<li><strong>@firebase/util:</strong> Auto-configures client SDK—not needed since we only use the server SDK</li>
+<li><strong>protobufjs:</strong> Checks version schema compatibility—not needed since it's a transitive dependency</li>
+</ul>
+<p>We researched what each script did (reading documentation and feeding the scripts to AI for interpretation), determined none were necessary for our use case, and blocked them. Zero impact on functionality.</p>
+<p>That was it. A few hours of initial investment for ongoing protection against Shai-Hulud-style attacks.</p>
+<p><strong>What the friction feels like:</strong> These controls create friction by design—and for us, that's a feature, not a bug. The friction forces conscious decisions about what code runs in our environment rather than implicitly trusting everything. When new dependencies have scripts, we anticipate it will take around 15 minutes to review and document the decision.</p>
+<p>We expect that the friction will become more intuitive with practice as we get more familiar with the process.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="what-were-learning">What We're Learning<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#what-were-learning" class="hash-link" aria-label="What We're Learning doğrudan bağlantı" title="What We're Learning doğrudan bağlantı" translate="no">​</a></h2>
+<p>A few things we've learned from our pilot:</p>
+<p><strong>The defense-in-depth model actually works.</strong> Having multiple layers on the client side—plus the benefits from npm's publishing-side improvements—means we can be pragmatic about exceptions. When we need to bypass one control for a legitimate reason, the others are still protecting us. This removes the anxiety of making exceptions—they're not security failures, they're the system working as designed.</p>
+<p><strong>The mental model takes time.</strong> There's a learning curve to thinking "security-first" rather than "convenience-first." But once the mental model clicks—that slightly older packages are safer, that explicit decisions are better than implicit trust—the workflow feels natural.</p>
+<p><strong>These controls are practical for mid-sized teams.</strong> We're not a large tech company with a dedicated security team. We're a mid-sized news media organization with limited engineering resources. If we can implement these controls successfully, they're accessible to most teams.</p>
+<p><strong>We're still learning.</strong> The threat landscape evolves, and our approach will too. The trust policy feature is only a few weeks old, and we don't yet know how often legitimate trust downgrades will occur in practice. We're planning to expand these controls to other codebases in the near future, which will give us more data on how they scale with applications with different dependency graphs.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="for-other-teams-considering-this">For Other Teams Considering This<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#for-other-teams-considering-this" class="hash-link" aria-label="For Other Teams Considering This doğrudan bağlantı" title="For Other Teams Considering This doğrudan bağlantı" translate="no">​</a></h2>
+<p>If you're considering pnpm's security controls, here's what worked for us:</p>
+<p><strong>Start with one project.</strong> Piloting on a single codebase first let us get comfortable with the workflow, understand the friction points, and build confidence before considering a broader rollout.</p>
+<p><strong>Plan for exceptions upfront.</strong> Go in expecting you'll need exceptions for lifecycle scripts (packages that need compilation), release cooldowns (critical security patches), and trust downgrades (CI/CD migrations). This isn't failure—it's how the system is designed to work.</p>
+<p><strong>Use <code>strictDepBuilds: true</code> from day one.</strong> Relying on warnings felt too risky for us. We wanted installation to fail immediately and force the decision. This prevents packages from potentially misbehaving later and ensures deliberate choices.</p>
+<p><strong>Document every exception.</strong> Write down why you allowed a lifecycle script or exempted a package. This creates an audit trail, helps future team members understand the reasoning, and makes it easy to clean up exceptions later.</p>
+<p><strong>Trust the layers.</strong> When you make an exception for one control, remember the other two are still protecting you. The defense-in-depth model gives you room to be pragmatic.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="share-your-experience">Share Your Experience<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#share-your-experience" class="hash-link" aria-label="Share Your Experience doğrudan bağlantı" title="Share Your Experience doğrudan bağlantı" translate="no">​</a></h2>
+<p>We'd love to hear from other teams implementing these controls or considering them. What's working? What's challenging? What have you learned? Join the conversation in the <a href="https://github.com/orgs/pnpm/discussions" target="_blank" rel="noopener noreferrer">pnpm GitHub Discussions</a> or share your experiences on social media—we're all learning together.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="thank-you">Thank You<a href="https://pnpm.io/tr/blog/2025/12/05/newsroom-npm-supply-chain-security#thank-you" class="hash-link" aria-label="Thank You doğrudan bağlantı" title="Thank You doğrudan bağlantı" translate="no">​</a></h2>
+<p>Thanks to the pnpm team for building these controls and for the thoughtful way they've approached making them both powerful and practical. And thanks for inviting us to share our story.</p>
+<p>The work you're doing matters. These controls provide real protection that complements npm's registry improvements. Together, they give teams like ours a fighting chance against increasingly sophisticated supply chain attacks.</p>
+<hr>
+<p><em>Ryan Sobol is a Principal Software Engineer at the Seattle Times, where he works on mobile and web development, cloud infrastructure, and developer tooling. The views expressed here are his own and based on the Seattle Times' pilot implementation of pnpm's security controls.</em></p><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.24]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.24</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.24</guid>
+            <pubDate>Thu, 27 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[pnpm now scales network concurrency automatically on high-core machines and ships several reliability fixes.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>pnpm now scales network concurrency automatically on high-core machines and ships several reliability fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.24#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="adaptive-network-concurrency">Adaptive network concurrency<a href="https://pnpm.io/tr/blog/releases/10.24#adaptive-network-concurrency" class="hash-link" aria-label="Adaptive network concurrency doğrudan bağlantı" title="Adaptive network concurrency doğrudan bağlantı" translate="no">​</a></h4>
+<p>Network concurrency now scales automatically between 16 and 64 based on the number of pnpm workers (workers × 3). This increases throughput on machines with many CPU cores while keeping resource usage predictable on smaller setups <a href="https://github.com/pnpm/pnpm/issues/10068" target="_blank" rel="noopener noreferrer">#10068</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.24#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li><code>trustPolicy</code> now ignores trust evidences from prerelease versions when you install a non-prerelease version, so a trusted prerelease cannot block installing a stable release that lacks trust evidence.</li>
+<li>Handle <code>ENOENT</code> errors thrown by <code>fs.linkSync()</code>, which can occur in containerized environments (OverlayFS) instead of <code>EXDEV</code>. pnpm now gracefully falls back to <code>fs.copyFileSync()</code> in these cases <a href="https://github.com/pnpm/pnpm/issues/10217" target="_blank" rel="noopener noreferrer">#10217</a>.</li>
+<li>Reverted: <code>pnpm self-update</code> downloading pnpm from the configured npm registry <a href="https://github.com/pnpm/pnpm/pull/10205" target="_blank" rel="noopener noreferrer">#10205</a>.</li>
+<li>Packages that don't have a <code>package.json</code> file (like Node.js) are no longer reimported from the store on every install. pnpm now checks an additional file to verify the package in <code>node_modules</code>.</li>
+<li>Correctly read auth tokens for URLs that contain underscores <a href="https://github.com/pnpm/npm-conf/pull/17" target="_blank" rel="noopener noreferrer">#17</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.23]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.23</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.23</guid>
+            <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Added --lockfile-only option to pnpm list and various improvements to pnpm self-update.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>Added <code>--lockfile-only</code> option to <code>pnpm list</code> and various improvements to <code>pnpm self-update</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.23#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="pnpm-list---lockfile-only"><code>pnpm list --lockfile-only</code><a href="https://pnpm.io/tr/blog/releases/10.23#pnpm-list---lockfile-only" class="hash-link" aria-label="pnpm-list---lockfile-only doğrudan bağlantı" title="pnpm-list---lockfile-only doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added <code>--lockfile-only</code> option to <code>pnpm list</code> <a href="https://github.com/pnpm/pnpm/issues/10020" target="_blank" rel="noopener noreferrer">#10020</a>.</p>
+<p>When specified, <code>pnpm list</code> will read package information from the lockfile instead of checking the actual <code>node_modules</code> directory. This is useful for quickly inspecting what would be installed without requiring a full installation.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.23#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li><code>pnpm self-update</code> should download pnpm from the configured npm registry <a href="https://github.com/pnpm/pnpm/pull/10205" target="_blank" rel="noopener noreferrer">#10205</a>.</li>
+<li><code>pnpm self-update</code> should always install the non-executable pnpm package (pnpm in the registry) and never the <code>@pnpm/exe</code> package, when installing v11 or newer. We currently cannot ship <code>@pnpm/exe</code> as <code>pkg</code> doesn't work with ESM <a href="https://github.com/pnpm/pnpm/pull/10190" target="_blank" rel="noopener noreferrer">#10190</a>.</li>
+<li>Node.js runtime is not added to "dependencies" on <code>pnpm add</code>, if there's a <code>engines.runtime</code> setting declared in <code>package.json</code> <a href="https://github.com/pnpm/pnpm/issues/10209" target="_blank" rel="noopener noreferrer">#10209</a>.</li>
+<li>The installation should fail if an optional dependency cannot be installed due to a trust policy check failure <a href="https://github.com/pnpm/pnpm/issues/10208" target="_blank" rel="noopener noreferrer">#10208</a>.</li>
+<li><code>pnpm list</code> and <code>pnpm why</code> now display npm: protocol for aliased packages (e.g., <code>foo npm:is-odd@3.0.1</code>) <a href="https://github.com/pnpm/pnpm/issues/8660" target="_blank" rel="noopener noreferrer">#8660</a>.</li>
+<li>Don't add an extra slash to the Node.js mirror URL <a href="https://github.com/pnpm/pnpm/pull/10204" target="_blank" rel="noopener noreferrer">#10204</a>.</li>
+<li><code>pnpm store prune</code> should not fail if the store contains Node.js packages <a href="https://github.com/pnpm/pnpm/issues/10131" target="_blank" rel="noopener noreferrer">#10131</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.22]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.22</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.22</guid>
+            <pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Added support for excluding packages from trust policy and overriding the engines field on publish.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>Added support for excluding packages from trust policy and overriding the <code>engines</code> field on publish.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.22#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="trust-policy-exclusions">Trust policy exclusions<a href="https://pnpm.io/tr/blog/releases/10.22#trust-policy-exclusions" class="hash-link" aria-label="Trust policy exclusions doğrudan bağlantı" title="Trust policy exclusions doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added support for <a href="https://pnpm.io/tr/settings#trustpolicyexclude"><code>trustPolicyExclude</code></a>.</p>
+<p>You can now list one or more specific packages or versions that pnpm should allow to install, even if those packages don't satisfy the trust policy requirement. For example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">trustPolicy</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> no</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">downgrade</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">trustPolicyExclude</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> chokidar@4.0.3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> webpack@4.47.0 </span><span class="token punctuation" style="color:#393A34">|</span><span class="token punctuation" style="color:#393A34">|</span><span class="token plain"> 5.102.1</span><br></span></code></pre></div></div>
+<p>Related issue: <a href="https://github.com/pnpm/pnpm/issues/10164" target="_blank" rel="noopener noreferrer">#10164</a></p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="override-engines-field-on-publish">Override engines field on publish<a href="https://pnpm.io/tr/blog/releases/10.22#override-engines-field-on-publish" class="hash-link" aria-label="Override engines field on publish doğrudan bağlantı" title="Override engines field on publish doğrudan bağlantı" translate="no">​</a></h4>
+<p>Allow to override the <code>engines</code> field on publish by the <code>publishConfig.engines</code> field.</p>
+<p>This allows you to specify different engine requirements for your published package than what you use during development.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.22#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Don't crash when two processes of pnpm are hardlinking the contents of a directory to the same destination simultaneously <a href="https://github.com/pnpm/pnpm/issues/10179" target="_blank" rel="noopener noreferrer">#10179</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.21]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.21</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.21</guid>
+            <pubDate>Mon, 10 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Added support for Node.js runtime installation for dependencies and a setting for configuring trust policy.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>Added support for Node.js runtime installation for dependencies and a setting for configuring trust policy.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.21#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="nodejs-runtime-installation-for-dependencies">Node.js runtime installation for dependencies<a href="https://pnpm.io/tr/blog/releases/10.21#nodejs-runtime-installation-for-dependencies" class="hash-link" aria-label="Node.js runtime installation for dependencies doğrudan bağlantı" title="Node.js runtime installation for dependencies doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added support for automatic Node.js runtime installation for dependencies. pnpm will now install the Node.js version required by a dependency if that dependency declares a Node.js runtime in the <a href="https://pnpm.io/tr/package_json#enginesruntime"><code>engines.runtime</code></a> field. For example:</p>
+<div class="language-json codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-json codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"engines"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"runtime"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"node"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"version"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"^24.11.0"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"onFail"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"download"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>If the package with the Node.js runtime dependency is a CLI app, pnpm will bind the CLI app to the required Node.js version. This ensures that, regardless of the globally installed Node.js instance, the CLI will use the compatible version of Node.js.</p>
+<p>If the package has a <code>postinstall</code> script, that script will be executed using the specified Node.js version.</p>
+<p>Related PR: <a href="https://github.com/pnpm/pnpm/pull/10141" target="_blank" rel="noopener noreferrer">#10141</a></p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="trust-policy">Trust policy<a href="https://pnpm.io/tr/blog/releases/10.21#trust-policy" class="hash-link" aria-label="Trust policy doğrudan bağlantı" title="Trust policy doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added a new setting: <a href="https://pnpm.io/tr/settings#trustpolicy"><code>trustPolicy</code></a>.</p>
+<p>When set to <code>no-downgrade</code>, pnpm will fail if a package's trust level has decreased compared to previous releases. For example, if a package was previously published by a trusted publisher but now only has provenance or no trust evidence, installation will fail. This helps prevent installing potentially compromised versions.</p>
+<p>Related issue: <a href="https://github.com/pnpm/pnpm/issues/8889" target="_blank" rel="noopener noreferrer">#8889</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="other-features">Other features<a href="https://pnpm.io/tr/blog/releases/10.21#other-features" class="hash-link" aria-label="Other features doğrudan bağlantı" title="Other features doğrudan bağlantı" translate="no">​</a></h4>
+<ul>
+<li>Added support for <code>pnpm config get globalconfig</code> to retrieve the global config file path <a href="https://github.com/pnpm/pnpm/issues/9977" target="_blank" rel="noopener noreferrer">#9977</a>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.21#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>When a user runs <code>pnpm update</code> on a dependency that is not directly listed in <code>package.json</code>, none of the direct dependencies should be updated <a href="https://github.com/pnpm/pnpm/pull/10155" target="_blank" rel="noopener noreferrer">#10155</a>.</li>
+<li>Don't crash when two processes of pnpm are hardlinking the contents of a directory to the same destination simultaneously <a href="https://github.com/pnpm/pnpm/pull/10160" target="_blank" rel="noopener noreferrer">#10160</a>.</li>
+<li>Setting <code>gitBranchLockfile</code> and related settings via <code>pnpm-workspace.yaml</code> should work <a href="https://github.com/pnpm/pnpm/issues/9651" target="_blank" rel="noopener noreferrer">#9651</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.20]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.20</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.20</guid>
+            <pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[This release adds a --all flag for the pnpm help command to print all commands.]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>This release adds a <code>--all</code> flag for the <code>pnpm help</code> command to print all commands.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.20#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="pnpm-help---all"><code>pnpm help --all</code><a href="https://pnpm.io/tr/blog/releases/10.20#pnpm-help---all" class="hash-link" aria-label="pnpm-help---all doğrudan bağlantı" title="pnpm-help---all doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added support for <code>--all</code> option in <code>pnpm help</code> to list all commands <a href="https://github.com/pnpm/pnpm/pull/8628" target="_blank" rel="noopener noreferrer">#8628</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.20#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>When the <code>latest</code> version doesn't satisfy the maturity requirement configured by <code>minimumReleaseAge</code>, pick the highest version that is mature enough, even if it has a different major version <a href="https://github.com/pnpm/pnpm/issues/10100" target="_blank" rel="noopener noreferrer">#10100</a>.</li>
+<li><code>create</code> command should not verify patch info.</li>
+<li>Set <code>managePackageManagerVersions</code> to <code>false</code>, when switching to a different version of pnpm CLI, in order to avoid subsequent switches <a href="https://github.com/pnpm/pnpm/issues/10063" target="_blank" rel="noopener noreferrer">#10063</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.19]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.19</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.19</guid>
+            <pubDate>Tue, 21 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[This release adds version-scoped controls to two settings: [onlyBuiltDependencies] and [minimumReleaseAgeExclude].]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><p>This release adds version-scoped controls to two settings: <a href="https://pnpm.io/tr/settings#onlybuiltdependencies"><code>onlyBuiltDependencies</code></a> and <a href="https://pnpm.io/tr/settings#minimumreleaseageexclude"><code>minimumReleaseAgeExclude</code></a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.19#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="versions-in-onlybuiltdependencies">Versions in <code>onlyBuiltDependencies</code><a href="https://pnpm.io/tr/blog/releases/10.19#versions-in-onlybuiltdependencies" class="hash-link" aria-label="versions-in-onlybuiltdependencies doğrudan bağlantı" title="versions-in-onlybuiltdependencies doğrudan bağlantı" translate="no">​</a></h4>
+<p>You can now allow specific versions of dependencies to run postinstall scripts. <a href="https://pnpm.io/tr/settings#onlybuiltdependencies"><code>onlyBuiltDependencies</code></a> accepts package names with exact versions (and disjunctions via <code>||</code>). For example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">onlyBuiltDependencies</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> nx@21.6.4 </span><span class="token punctuation" style="color:#393A34">|</span><span class="token punctuation" style="color:#393A34">|</span><span class="token plain"> 21.6.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> esbuild@0.25.1</span><br></span></code></pre></div></div>
+<p>Related PR: <a href="https://github.com/pnpm/pnpm/pull/10104" target="_blank" rel="noopener noreferrer">#10104</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id="versions-in-minimumreleaseageexclude">Versions in <code>minimumReleaseAgeExclude</code><a href="https://pnpm.io/tr/blog/releases/10.19#versions-in-minimumreleaseageexclude" class="hash-link" aria-label="versions-in-minimumreleaseageexclude doğrudan bağlantı" title="versions-in-minimumreleaseageexclude doğrudan bağlantı" translate="no">​</a></h4>
+<p>Added support for exact versions in <a href="https://pnpm.io/tr/settings#minimumreleaseageexclude"><code>minimumReleaseAgeExclude</code></a>. This lets you opt specific versions out of the maturity window enforced by <a href="https://pnpm.io/tr/settings#minimumreleaseage"><code>minimumReleaseAge</code></a>.</p>
+<p>You can list one or more specific versions that pnpm should allow to install, even if those versions don’t satisfy the maturity requirement set by <a href="https://pnpm.io/tr/settings#minimumreleaseage"><code>minimumReleaseAge</code></a>. For example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">minimumReleaseAge</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1440</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">minimumReleaseAgeExclude</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> nx@21.6.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> webpack@4.47.0 </span><span class="token punctuation" style="color:#393A34">|</span><span class="token punctuation" style="color:#393A34">|</span><span class="token plain"> 5.102.1</span><br></span></code></pre></div></div>
+<p>Related issue: <a href="https://github.com/pnpm/pnpm/issues/9985" target="_blank" rel="noopener noreferrer">#9985</a>.</p><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.18]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.18</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.18</guid>
+            <pubDate>Thu, 02 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Minor Changes]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.18#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<p>Added network performance monitoring to pnpm by implementing warnings for slow network requests, including both metadata fetches and tarball downloads.</p>
+<p>Added configuration options for warning thresholds: <code>fetchWarnTimeoutMs</code> and <code>fetchMinSpeedKiBps</code>.
+Warning messages are displayed when requests exceed time thresholds or fall below speed minimums</p>
+<p>Related PR: <a href="https://github.com/pnpm/pnpm/pull/10025" target="_blank" rel="noopener noreferrer">#10025</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.18#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Retry filesystem operations on EAGAIN errors <a href="https://github.com/pnpm/pnpm/pull/9959" target="_blank" rel="noopener noreferrer">#9959</a>.</li>
+<li>Outdated command respects <code>minimumReleaseAge</code> configuration <a href="https://github.com/pnpm/pnpm/pull/10030" target="_blank" rel="noopener noreferrer">#10030</a>.</li>
+<li>Correctly apply the <code>cleanupUnusedCatalogs</code> configuration when removing dependent packages.</li>
+<li>Don't fail with a meaningless error when <code>scriptShell</code> is set to <code>false</code> <a href="https://github.com/pnpm/pnpm/issues/8748" target="_blank" rel="noopener noreferrer">#8748</a>.</li>
+<li><code>pnpm dlx</code> should not fail when <code>minimumReleaseAge</code> is set <a href="https://github.com/pnpm/pnpm/issues/10037" target="_blank" rel="noopener noreferrer">#10037</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.17]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.17</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.17</guid>
+            <pubDate>Wed, 17 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Minor Changes]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><h3 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.17#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h3>
+<p>The <code>minimumReleaseAgeExclude</code> setting now supports patterns.</p>
+<p>For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">minimumReleaseAge</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1440</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">minimumReleaseAgeExclude</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"@eslint/*"</span><br></span></code></pre></div></div>
+<p>Related PR: <a href="https://github.com/pnpm/pnpm/pull/9984" target="_blank" rel="noopener noreferrer">#9984</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.17#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>Don't ignore the <code>minimumReleaseAge</code> check, when the package is requested by exact version and the packument is loaded from cache <a href="https://github.com/pnpm/pnpm/issues/9978" target="_blank" rel="noopener noreferrer">#9978</a>.</li>
+<li>When <code>minimumReleaseAge</code> is set and the active version under a dist-tag is not mature enough, do not downgrade to a prerelease version in case the original version wasn't a prerelease one <a href="https://github.com/pnpm/pnpm/issues/9979" target="_blank" rel="noopener noreferrer">#9979</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.16]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.16</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.16</guid>
+            <pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Minor Changes]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><h2 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.16#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="new-setting-for-delayed-dependency-updates">New setting for delayed dependency updates<a href="https://pnpm.io/tr/blog/releases/10.16#new-setting-for-delayed-dependency-updates" class="hash-link" aria-label="New setting for delayed dependency updates doğrudan bağlantı" title="New setting for delayed dependency updates doğrudan bağlantı" translate="no">​</a></h3>
+<p>There have been several incidents recently where popular packages were successfully attacked. To reduce the risk of installing a compromised version, we are introducing a new setting that delays the installation of newly released dependencies. In most cases, such attacks are discovered quickly and the malicious versions are removed from the registry within an hour.</p>
+<p>The new setting is called <a href="https://pnpm.io/tr/settings#minimumreleaseage"><code>minimumReleaseAge</code></a>. It specifies the number of minutes that must pass after a version is published before pnpm will install it. For example, setting <code>minimumReleaseAge: 1440</code> ensures that only packages released at least one day ago can be installed.</p>
+<p>If you set <code>minimumReleaseAge</code> but need to disable this restriction for certain dependencies, you can list them under the <a href="https://pnpm.io/tr/settings#minimumreleaseageexclude"><code>minimumReleaseAgeExclude</code></a> setting. For instance, with the following configuration pnpm will always install the latest version of webpack, regardless of its release time:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">minimumReleaseAgeExclude</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> webpack</span><br></span></code></pre></div></div>
+<p>Related issue: <a href="https://github.com/pnpm/pnpm/issues/9921" target="_blank" rel="noopener noreferrer">#9921</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="advanced-dependency-filtering-with-finder-functions">Advanced dependency filtering with finder functions<a href="https://pnpm.io/tr/blog/releases/10.16#advanced-dependency-filtering-with-finder-functions" class="hash-link" aria-label="Advanced dependency filtering with finder functions doğrudan bağlantı" title="Advanced dependency filtering with finder functions doğrudan bağlantı" translate="no">​</a></h3>
+<p>Added support for <a href="https://pnpm.io/tr/finders"><code>finders</code></a>.</p>
+<p>In the past, <code>pnpm list</code> and <code>pnpm why</code> could only search for dependencies by <strong>name</strong> (and optionally version). For example:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-text codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">pnpm why minimist</span><br></span></code></pre></div></div>
+<p>prints the chain of dependencies to any installed instance of <code>minimist</code>:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-text codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">verdaccio 5.20.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─┬ handlebars 4.7.7</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ └── minimist 1.2.8</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─┬ mv 2.1.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─┬ mkdirp 0.5.6</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  └── minimist 1.2.8</span><br></span></code></pre></div></div>
+<p>What if we want to search by <strong>other properties</strong> of a dependency, not just its name? For instance, find all packages that have <code>react@17</code> in their peer dependencies?</p>
+<p>This is now possible with "finder functions". Finder functions can be declared in <code>.pnpmfile.cjs</code> and invoked with the <code>--find-by=&lt;function name&gt;</code> flag when running <code>pnpm list</code> or <code>pnpm why</code>.</p>
+<p>Let's say we want to find any dependencies that have React 17 in peer dependencies. We can add this finder to our <code>.pnpmfile.cjs</code>:</p>
+<div class="language-js codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-js codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">module</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">exports</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token literal-property property" style="color:#36acaa">finders</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function-variable function" style="color:#d73a49">react17</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">ctx</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> ctx</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">readManifest</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">peerDependencies</span><span class="token operator" style="color:#393A34">?.</span><span class="token plain">react </span><span class="token operator" style="color:#393A34">===</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"^17.0.0"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>Now we can use this finder function by running:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-text codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">pnpm why --find-by=react17</span><br></span></code></pre></div></div>
+<p>pnpm will find all dependencies that have this React in peer dependencies and print their exact locations in the dependency graph.</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-text codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">@apollo/client 4.0.4</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── @graphql-typed-document-node/core 3.2.0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── graphql-tag 2.12.6</span><br></span></code></pre></div></div>
+<p>It is also possible to print out some additional information in the output by returning a string from the finder. For example, with the following finder:</p>
+<div class="language-js codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-js codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">module</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">exports</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token literal-property property" style="color:#36acaa">finders</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function-variable function" style="color:#d73a49">react17</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">ctx</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> manifest </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> ctx</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">readManifest</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword control-flow" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">manifest</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">peerDependencies</span><span class="token operator" style="color:#393A34">?.</span><span class="token plain">react </span><span class="token operator" style="color:#393A34">===</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"^17.0.0"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color:#e3116c">`</span><span class="token template-string string" style="color:#e3116c">license: </span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color:#393A34">${</span><span class="token template-string interpolation">manifest</span><span class="token template-string interpolation punctuation" style="color:#393A34">.</span><span class="token template-string interpolation property-access">license</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color:#393A34">}</span><span class="token template-string template-punctuation string" style="color:#e3116c">`</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">false</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>Every matched package will also print out the license from its <code>package.json</code>:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-text codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token plain">@apollo/client 4.0.4</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── @graphql-typed-document-node/core 3.2.0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   license: MIT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── graphql-tag 2.12.6</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  license: MIT</span><br></span></code></pre></div></div>
+<p>Related PR: <a href="https://github.com/pnpm/pnpm/pull/9946" target="_blank" rel="noopener noreferrer">#9946</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.16#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h2>
+<ul>
+<li>Fix deprecation warning printed when executing pnpm with Node.js 24 <a href="https://github.com/pnpm/pnpm/issues/9529" target="_blank" rel="noopener noreferrer">#9529</a>.</li>
+<li>Throw an error if <code>nodeVersion</code> is not set to an exact semver version <a href="https://github.com/pnpm/pnpm/issues/9934" target="_blank" rel="noopener noreferrer">#9934</a>.</li>
+<li><code>pnpm publish</code> should be able to publish a <code>.tar.gz</code> file <a href="https://github.com/pnpm/pnpm/pull/9927" target="_blank" rel="noopener noreferrer">#9927</a>.</li>
+<li>Canceling a running process with Ctrl-C should make <code>pnpm run</code> return a non-zero exit code <a href="https://github.com/pnpm/pnpm/issues/9626" target="_blank" rel="noopener noreferrer">#9626</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[pnpm 10.15]]></title>
+            <link>https://pnpm.io/tr/blog/releases/10.15</link>
+            <guid>https://pnpm.io/tr/blog/releases/10.15</guid>
+            <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Minor Changes]]></description>
+            <content:encoded><![CDATA[<div id="bsa-custom-01" class="bsa-standard"></div><h2 class="anchor anchorWithStickyNavbar_VHH3" id="minor-changes">Minor Changes<a href="https://pnpm.io/tr/blog/releases/10.15#minor-changes" class="hash-link" aria-label="Minor Changes doğrudan bağlantı" title="Minor Changes doğrudan bağlantı" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="new-setting-for-catalogs">New setting for catalogs<a href="https://pnpm.io/tr/blog/releases/10.15#new-setting-for-catalogs" class="hash-link" aria-label="New setting for catalogs doğrudan bağlantı" title="New setting for catalogs doğrudan bağlantı" translate="no">​</a></h3>
+<p>Added the <a href="https://pnpm.io/tr/settings#cleanupunusedcatalogs"><code>cleanupUnusedCatalogs</code></a> configuration. When set to <code>true</code>, pnpm will remove unused catalog entries during installation <a href="https://github.com/pnpm/pnpm/pull/9793" target="_blank" rel="noopener noreferrer">#9793</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="config-dependency-improvement">Config dependency improvement<a href="https://pnpm.io/tr/blog/releases/10.15#config-dependency-improvement" class="hash-link" aria-label="Config dependency improvement doğrudan bağlantı" title="Config dependency improvement doğrudan bağlantı" translate="no">​</a></h3>
+<p>pnpm will now automatically load pnpmfiles from <a href="https://pnpm.io/tr/config-dependencies">config dependencies</a> that are named <code>@*/pnpm-plugin-*</code> <a href="https://github.com/pnpm/pnpm/issues/9780" target="_blank" rel="noopener noreferrer">#9780</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id="changes-to-the-config-getset-commands">Changes to the config get/set commands<a href="https://pnpm.io/tr/blog/releases/10.15#changes-to-the-config-getset-commands" class="hash-link" aria-label="Changes to the config get/set commands doğrudan bağlantı" title="Changes to the config get/set commands doğrudan bağlantı" translate="no">​</a></h3>
+<ul>
+<li>
+<p><code>pnpm config get</code> now prints an INI string for an object value <a href="https://github.com/pnpm/pnpm/issues/9797" target="_blank" rel="noopener noreferrer">#9797</a>.</p>
+</li>
+<li>
+<p><code>pnpm config get</code> now accepts property paths.</p>
+<p>For example:</p>
+<div class="language-sh codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-sh codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> config get catalog.react</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> config get .catalog.react</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> config get </span><span class="token string" style="color:#e3116c">'packageExtensions["@babel/parser"].peerDependencies["@babel/types"]'</span><br></span></code></pre></div></div>
+<p><code>pnpm config set</code> now accepts dot-leading or subscripted keys.</p>
+<p>For example:</p>
+<div class="language-sh codeBlockContainer_pbKI theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cWnm"><pre tabindex="0" class="prism-code language-sh codeBlock_dUJW thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_wqoa"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">pnpm</span><span class="token plain"> config </span><span class="token builtin class-name">set</span><span class="token plain"> .ignoreScripts </span><span class="token boolean" style="color:#36acaa">true</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><code>pnpm config get --json</code> now prints a JSON serialization of config value, and <code>pnpm config set --json</code> now parses the input value as JSON.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id="patch-changes">Patch Changes<a href="https://pnpm.io/tr/blog/releases/10.15#patch-changes" class="hash-link" aria-label="Patch Changes doğrudan bağlantı" title="Patch Changes doğrudan bağlantı" translate="no">​</a></h2>
+<ul>
+<li><strong>Semi-breaking.</strong> When automatically installing missing peer dependencies, prefer versions that are already present in the direct dependencies of the root workspace package <a href="https://github.com/pnpm/pnpm/pull/9835" target="_blank" rel="noopener noreferrer">#9835</a>.</li>
+<li>When executing the <code>pnpm create</code> command, must verify whether the node version is supported even if a cache already exists <a href="https://github.com/pnpm/pnpm/pull/9775" target="_blank" rel="noopener noreferrer">#9775</a>.</li>
+<li>When making requests for the non-abbreviated packument, add <code>*/*</code> to the <code>Accept</code> header to avoid getting a 406 error on AWS CodeArtifact <a href="https://github.com/pnpm/pnpm/issues/9862" target="_blank" rel="noopener noreferrer">#9862</a>.</li>
+<li>The standalone exe version of pnpm works with glibc 2.26 again <a href="https://github.com/pnpm/pnpm/issues/9734" target="_blank" rel="noopener noreferrer">#9734</a>.</li>
+<li>Fix a regression in which <code>pnpm dlx pkg --help</code> doesn't pass <code>--help</code> to <code>pkg</code> <a href="https://github.com/pnpm/pnpm/issues/9823" target="_blank" rel="noopener noreferrer">#9823</a>.</li>
+</ul><script src="//m.servedby-buysellads.com/monetization.custom.js"></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script>]]></content:encoded>
+            <category>release</category>
+        </item>
+    </channel>
+</rss>

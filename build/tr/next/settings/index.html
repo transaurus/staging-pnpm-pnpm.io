@@ -1,0 +1,971 @@
+<!doctype html><html lang=tr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-settings" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.1"><title data-rh=true>Settings (pnpm-workspace.yaml) | pnpm</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://pnpm.io/tr/img/ogimage.png /><meta data-rh=true name=twitter:image content=https://pnpm.io/tr/img/ogimage.png /><meta data-rh=true property=og:url content=https://pnpm.io/tr/next/settings /><meta data-rh=true property=og:locale content=tr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=it /><meta data-rh=true property=og:locale:alternate content=zh /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=ko /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true property=og:locale:alternate content=zh_TW /><meta data-rh=true property=og:locale:alternate content=ru /><meta data-rh=true property=og:locale:alternate content=uk /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=id /><meta data-rh=true name=docusaurus_locale content=tr /><meta data-rh=true name=docsearch:language content=tr /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Settings (pnpm-workspace.yaml) | pnpm"/><meta data-rh=true name=description content="pnpm gets its configuration from the command line, environment variables, pnpm-workspace.yaml, and"/><meta data-rh=true property=og:description content="pnpm gets its configuration from the command line, environment variables, pnpm-workspace.yaml, and"/><link data-rh=true rel=icon href=/tr/img/favicon.png /><link data-rh=true rel=canonical href=https://pnpm.io/tr/next/settings /><link data-rh=true rel=alternate href=https://pnpm.io/next/settings hreflang=en /><link data-rh=true rel=alternate href=https://pnpm.io/it/next/settings hreflang=it /><link data-rh=true rel=alternate href=https://pnpm.io/zh/next/settings hreflang=zh /><link data-rh=true rel=alternate href=https://pnpm.io/ja/next/settings hreflang=ja /><link data-rh=true rel=alternate href=https://pnpm.io/ko/next/settings hreflang=ko /><link data-rh=true rel=alternate href=https://pnpm.io/pt/next/settings hreflang=pt /><link data-rh=true rel=alternate href=https://pnpm.io/zh-TW/next/settings hreflang=zh-TW /><link data-rh=true rel=alternate href=https://pnpm.io/ru/next/settings hreflang=ru /><link data-rh=true rel=alternate href=https://pnpm.io/uk/next/settings hreflang=uk /><link data-rh=true rel=alternate href=https://pnpm.io/fr/next/settings hreflang=fr /><link data-rh=true rel=alternate href=https://pnpm.io/tr/next/settings hreflang=tr /><link data-rh=true rel=alternate href=https://pnpm.io/es/next/settings hreflang=es /><link data-rh=true rel=alternate href=https://pnpm.io/id/next/settings hreflang=id /><link data-rh=true rel=alternate href=https://pnpm.io/next/settings hreflang=x-default /><link data-rh=true rel=preconnect href=https://RAHRBBK2WL-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://pnpm.io/tr/next/settings","name":"Settings (pnpm-workspace.yaml)","position":1}]}</script><link rel=alternate type=application/rss+xml href=/tr/blog/rss.xml title="pnpm RSS Feed"><link rel=alternate type=application/atom+xml href=/tr/blog/atom.xml title="pnpm Atom Feed"><link rel=preconnect href=https://www.google-analytics.com><link rel=preconnect href=https://www.googletagmanager.com><script async src="https://www.googletagmanager.com/gtag/js?id=UA-91385296-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-91385296-1",{anonymize_ip:!0})</script><link rel=search type=application/opensearchdescription+xml title=pnpm href=/tr/opensearch.xml><script src=https://buttons.github.io/buttons.js></script><script src=/homepage.js></script><link rel=stylesheet href=/tr/assets/css/styles.adcc4d7a.css /><script src=/tr/assets/js/runtime~main.7692129f.js defer></script><script src=/tr/assets/js/main.6a6dbe6c.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=/tr/img/pnpm-no-name-with-frame.svg /><link rel=preload as=image href=/tr/img/pnpm-light.svg /><div role=region aria-label="Ana içeriğe geç"><a class=skipToContent_WlXi href=#__docusaurus_skipToContent_fallback>Ana içeriğe geç</a></div><div class="theme-announcement-bar announcementBar_Uf7d" role=banner><div class=announcementBarPlaceholder_dTBy></div><div class="content_FJVd announcementBarContent_Zvpt">Learn how to <b><a href=https://pnpm.io/supply-chain-security>Mitigate supply chain attacks with pnpm</a></b></div><button type=button aria-label=Kapat class="clean-btn close closeButton_Ah9l announcementBarClose_vwkq"><svg viewBox="0 0 15 15" width=14 height=14><g stroke=currentColor stroke-width=3.1><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"/></g></svg></button></div><nav aria-label="Ana menü" class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Gezinme çubuğunu aç/kapat" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/tr/><div class=navbar__logo><img src=/tr/img/pnpm-no-name-with-frame.svg alt="" class="themedComponent_JL_G themedComponent--light_t756"/><img src=/tr/img/pnpm-no-name-with-frame.svg alt="" class="themedComponent_JL_G themedComponent--dark_Y66J"/></div><b class="navbar__title text--truncate">pnpm</b></a><a class="navbar__item navbar__link" href=/tr/motivation>Docs</a><a class="navbar__item navbar__link header-long-screen" href=/tr/blog>Blog</a><a class="navbar__item navbar__link header-long-screen" href=/tr/faq>FAQ</a><a class="navbar__item navbar__link header-long-screen" href=/tr/benchmarks>Benchmarks</a><a class="navbar__item navbar__link" href=/tr/community/articles>Community</a><div class="navbar__item dropdown dropdown--hoverable"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link header-short-screen">More</a><ul class=dropdown__menu><li><a class=dropdown__link href=/tr/blog>Blog</a><li><a class=dropdown__link href=/tr/faq>FAQ</a><li><a class=dropdown__link href=/tr/community/articles>Community</a><li><a class=dropdown__link href=/tr/benchmarks>Benchmarks</a></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/tr/next/settings>Next</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/tr/next/settings>Next</a><li><a class=dropdown__link href=/tr/11.x/settings>11.x</a><li><a class=dropdown__link href=/tr/settings>10.x</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_KQo6><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Türkçe (28%)</a><ul class=dropdown__menu><li><a href=/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/it/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=it>Italiano (61%)</a><li><a href=/zh/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=zh>简体中文 (99%)</a><li><a href=/ja/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=ja>日本語 (86%)</a><li><a href=/ko/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=ko>한국어 (52%)</a><li><a href=/pt/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=pt>Português Brasileiro (61%)</a><li><a href=/zh-TW/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=zh-TW>正體中文 (43%)</a><li><a href=/ru/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=ru>Русский (38%)</a><li><a href=/uk/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=uk>Українська (80%)</a><li><a href=/fr/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=fr>Français (50%)</a><li><a href=/tr/next/settings target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=tr>Türkçe (28%)</a><li><a href=/es/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=es>Español (67%)</a><li><a href=/id/next/settings target=_self rel="noopener noreferrer" class=dropdown__link lang=id>Bahasa Indonesia (32%)</a><li><a href=https://translate.pnpm.io target=_blank rel="noopener noreferrer" class=dropdown__link>Help Us Translate</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>🧡 Sponsor Us</a><ul class=dropdown__menu><li><a href=https://opencollective.com/pnpm target=_blank rel="noopener noreferrer" class=dropdown__link>Open Collective<svg width=12 height=12 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/sponsors/pnpm target=_blank rel="noopener noreferrer" class=dropdown__link>GitHub Sponsors<svg width=12 height=12 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a><li><a class=dropdown__link href=/tr/crypto-donations>Crypto Donations</a></ul></div><a href=https://github.com/pnpm/pnpm target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><a href=https://bit.cloud/pnpm target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-bit-cloud-link" aria-label=Bit.cloud></a><div class="toggle_WSPV colorModeToggle_VU2K"><button class="clean-btn toggleButton_ljxS toggleButtonDisabled_YofU" type=button disabled title="system mode" aria-label="Karanlık ve aydınlık mod arasında geçiş yapın (şu anda system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_sbm_ lightToggleIcon_gYXC"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_sbm_ darkToggleIcon_Iqm0"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_sbm_ systemToggleIcon_WgrJ"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_actP><button type=button class="DocSearch DocSearch-Button" aria-label="Ara (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Ara</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_rnNh"><div class=docsWrapper_QZ0B><button aria-label="Sayfa başına dön" class="clean-btn theme-back-to-top-button backToTopButton_s6SK" type=button></button><div class=docRoot_zoDY><aside class="theme-doc-sidebar-container docSidebarContainer_IHBg"><div class=sidebarViewport_hDI9><div class=sidebar_dsCv><nav aria-label="Belgeler kenar çubuğu" class="menu thin-scrollbar menu_dHnv menuWithAnnouncementBar_Uty9"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/tr/next/motivation><span title=Introduction class=categoryLinkLabel_wNbw>Introduction</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/tr/next/pnpm-cli><span title=Usage class=categoryLinkLabel_wNbw>Usage</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/tr/next/cli/add><span title="CLI commands" class=categoryLinkLabel_wNbw>CLI commands</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/tr/next/package_json><span title=Configuration class=categoryLinkLabel_wNbw>Configuration</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/tr/next/package_json><span title=package.json class=linkLabel_CoM4>package.json</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/tr/next/settings><span title="Settings (pnpm-workspace.yaml)" class=linkLabel_CoM4>Settings (pnpm-workspace.yaml)</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/tr/next/npmrc><span title="Auth & Registry Settings (.npmrc)" class=linkLabel_CoM4>Auth & Registry Settings (.npmrc)</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/tr/next/pnpm-workspace_yaml><span title=pnpm-workspace.yaml class=linkLabel_CoM4>pnpm-workspace.yaml</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/tr/next/pnpmfile><span title=.pnpmfile.mjs class=linkLabel_CoM4>.pnpmfile.mjs</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/tr/next/package-sources><span title=Features class=categoryLinkLabel_wNbw>Features</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/tr/next/using-changesets><span title=Recipes class=categoryLinkLabel_wNbw>Recipes</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_nfTk menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/tr/next/errors><span title=Advanced class=categoryLinkLabel_wNbw>Advanced</span></a></div></ul></nav></div></div></aside><main class=docMainContainer_Ok6G><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_Jvk4"><div class="theme-doc-version-banner alert alert--warning margin-bottom--md" role=alert><div>Bu, <!-- -->pnpm<!-- --> <b>Next</b> sürümü için yayınlanmamış dokümantasyondur.</div><div class=margin-top--md>Güncel belgeler için bkz. <b><a href=/tr/settings>en son sürüm</a></b> (<!-- -->10.x<!-- -->).</div></div><div class=docItemContainer_Tx5u><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Q5EH" aria-label="Gezinti yolu"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Ana sayfa" class=breadcrumbs__link href=/tr/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_Dg1M><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Configuration</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Settings (pnpm-workspace.yaml)</span></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Versiyon: Next</span><div class="tocCollapsible_S4dj theme-doc-toc-mobile tocMobile_pvG1"><button type=button class="clean-btn tocCollapsibleButton_AS4M">Bu sayfada</button></div><div class="theme-doc-markdown markdown"><header><h1>Settings (pnpm-workspace.yaml)</h1></header><div id=bsa-custom-01 class=bsa-standard></div><p>pnpm gets its configuration from the command line, environment variables, <code>pnpm-workspace.yaml</code>, and
+<code>.npmrc</code> files.</p>
+<p>The <code>pnpm config</code> command can be used to read and edit the contents of the project and global configuration files.</p>
+<p>The relevant configuration files are:</p>
+<ul>
+<li>Per-project configuration file: <code>/path/to/my/project/pnpm-workspace.yaml</code></li>
+<li><a href=/tr/next/cli/config>Global configuration file</a></li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_g_IF alert alert--secondary"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>not</div><div class=admonitionContent_e01q><p>Authorization-related settings are handled via <a href=/tr/next/npmrc><code>.npmrc</code></a>.</div></div>
+<p>Values in the configuration files may contain env variables using the <code>${NAME}</code> syntax. The env variables may also be specified with default values. Using <code>${NAME-fallback}</code> will return <code>fallback</code> if <code>NAME</code> isn't set. <code>${NAME:-fallback}</code> will return <code>fallback</code> if <code>NAME</code> isn't set, or is an empty string.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=dependency-resolution>Dependency Resolution<a href=#dependency-resolution class=hash-link aria-label="Dependency Resolution doğrudan bağlantı" title="Dependency Resolution doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=overrides>overrides<a href=#overrides class=hash-link aria-label="overrides doğrudan bağlantı" title="overrides doğrudan bağlantı" translate=no>​</a></h3>
+<p>This field allows you to instruct pnpm to override any dependency in the
+dependency graph, including peer dependencies. This is useful for enforcing all your packages to use a single
+version of a dependency, backporting a fix, replacing a dependency with a fork, or
+removing an unused dependency.</p>
+<p>Note that the overrides field can only be set at the root of the project.</p>
+<p>An example of the <code>overrides</code> field:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>overrides</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>"foo"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"^1.0.0"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>"quux"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"npm:@myorg/quux@^1.0.0"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>"bar@^2.1.0"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"3.0.0"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>"qar@1>zoo"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"2"</span><br/></span></code></pre></div></div>
+<p>You may specify the package the overridden dependency belongs to by
+separating the package selector from the dependency selector with a ">", for
+example <code>qar@1>zoo</code> will only override the <code>zoo</code> dependency of <code>qar@1</code>, not for
+any other dependencies.</p>
+<p>An override may be defined as a reference to a direct dependency's spec.
+This is achieved by prefixing the name of the dependency with a <code>$</code>:</p>
+<div class="language-json codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockTitle_KdeV>package.json</div><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-json codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token property" style=color:#36acaa>"dependencies"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token property" style=color:#36acaa>"foo"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"^1.0.0"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></span></code></pre></div></div>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockTitle_KdeV>pnpm-workspace.yaml</div><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>overrides</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>foo</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"$foo"</span><br/></span></code></pre></div></div>
+<p>The referenced package does not need to match the overridden one:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockTitle_KdeV>pnpm-workspace.yaml</div><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>overrides</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>bar</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"$foo"</span><br/></span></code></pre></div></div>
+<p>If you find that your use of a certain package doesn't require one of its dependencies, you may use <code>-</code> to remove it. For example, if package <code>foo@1.0.0</code> requires a large package named <code>bar</code> for a function that you don't use, removing it could reduce install time:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>overrides</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>"foo@1.0.0>bar"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"-"</span><br/></span></code></pre></div></div>
+<p>This feature is especially useful with <code>optionalDependencies</code>, where most optional packages can be safely skipped.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=overriding-peer-dependencies>Overriding peer dependencies<a href=#overriding-peer-dependencies class=hash-link aria-label="Overriding peer dependencies doğrudan bağlantı" title="Overriding peer dependencies doğrudan bağlantı" translate=no>​</a></h4>
+<p>Overrides also apply to <code>peerDependencies</code>. The behavior depends on the type of version specifier used in the override:</p>
+<ul>
+<li><strong>Semver ranges</strong> (e.g., <code>^1.0.0</code>), <strong>workspace</strong>, and <strong>catalog</strong> protocols: the peer dependency is overridden and remains a peer dependency.</li>
+<li><strong>Non-range specifiers</strong> such as <code>link:</code> or <code>file:</code> protocols: the peer dependency is overridden and moved to <code>dependencies</code>, since these are not valid peer dependency ranges.</li>
+<li><strong>Removal</strong> (<code>-</code>): the peer dependency is removed entirely.</li>
+</ul>
+<p>For example, to override the <code>react</code> peer dependency of <code>react-dom</code>:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockTitle_KdeV>pnpm-workspace.yaml</div><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>overrides</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>"react-dom>react"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"18.1.0"</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=packageextensions>packageExtensions<a href=#packageextensions class=hash-link aria-label="packageExtensions doğrudan bağlantı" title="packageExtensions doğrudan bağlantı" translate=no>​</a></h3>
+<p>The <code>packageExtensions</code> fields offer a way to extend the existing package definitions with additional information. For example, if <code>react-redux</code> should have <code>react-dom</code> in its <code>peerDependencies</code> but it has not, it is possible to patch <code>react-redux</code> using <code>packageExtensions</code>:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>packageExtensions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>react-redux</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>peerDependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token key atrule" style=color:#00a4db>react-dom</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*"</span><br/></span></code></pre></div></div>
+<p>The keys in <code>packageExtensions</code> are package names or package names and semver ranges, so it is possible to patch only some versions of a package:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>packageExtensions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>react-redux@1</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>peerDependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token key atrule" style=color:#00a4db>react-dom</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*"</span><br/></span></code></pre></div></div>
+<p>The following fields may be extended using <code>packageExtensions</code>: <code>dependencies</code>, <code>optionalDependencies</code>, <code>peerDependencies</code>, and <code>peerDependenciesMeta</code>.</p>
+<p>A bigger example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>packageExtensions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>express@1</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>optionalDependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token key atrule" style=color:#00a4db>typescript</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"2"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>fork-ts-checker-webpack-plugin</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>dependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token key atrule" style=color:#00a4db>"@babel/core"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"1"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>peerDependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token key atrule" style=color:#00a4db>eslint</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>">= 6"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>peerDependenciesMeta</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token key atrule" style=color:#00a4db>eslint</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        </span><span class="token key atrule" style=color:#00a4db>optional</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token boolean important" style=color:#36acaa>true</span><br/></span></code></pre></div></div>
+<div class="theme-admonition theme-admonition-tip admonition_g_IF alert alert--success"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>ipucu</div><div class=admonitionContent_e01q><p>Together with Yarn, we maintain a database of <code>packageExtensions</code> to patch broken packages in the ecosystem.
+If you use <code>packageExtensions</code>, consider sending a PR upstream and contributing your extension to the <a href=https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-extensions/sources/index.ts target=_blank rel="noopener noreferrer"><code>@yarnpkg/extensions</code></a> database.</div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=alloweddeprecatedversions>allowedDeprecatedVersions<a href=#alloweddeprecatedversions class=hash-link aria-label="allowedDeprecatedVersions doğrudan bağlantı" title="allowedDeprecatedVersions doğrudan bağlantı" translate=no>​</a></h3>
+<p>This setting allows muting deprecation warnings of specific packages.</p>
+<p>Example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>allowedDeprecatedVersions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>express</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"1"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>request</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*"</span><br/></span></code></pre></div></div>
+<p>With the above configuration pnpm will not print deprecation warnings about any version of <code>request</code> and about v1 of <code>express</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=updateconfig>updateConfig<a href=#updateconfig class=hash-link aria-label="updateConfig doğrudan bağlantı" title="updateConfig doğrudan bağlantı" translate=no>​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=updateconfigignoredependencies>updateConfig.ignoreDependencies<a href=#updateconfigignoredependencies class=hash-link aria-label="updateConfig.ignoreDependencies doğrudan bağlantı" title="updateConfig.ignoreDependencies doğrudan bağlantı" translate=no>​</a></h4>
+<p>Sometimes you can't update a dependency. For instance, the latest version of the dependency started to use ESM but your project is not yet in ESM. Annoyingly, such a package will be always printed out by the <code>pnpm outdated</code> command and updated, when running <code>pnpm update --latest</code>. However, you may list packages that you don't want to upgrade in the <code>ignoreDependencies</code> field:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>updateConfig</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>ignoreDependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> load</span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain">json</span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain">file</span><br/></span></code></pre></div></div>
+<p>Patterns are also supported, so you may ignore any packages from a scope: <code>@babel/*</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=supportedarchitectures>supportedArchitectures<a href=#supportedarchitectures class=hash-link aria-label="supportedArchitectures doğrudan bağlantı" title="supportedArchitectures doğrudan bağlantı" translate=no>​</a></h3>
+<p>You can specify architectures for which you'd like to install optional dependencies, even if they don't match the architecture of the system running the install.</p>
+<p>For example, the following configuration tells to install optional dependencies for Windows x64:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>supportedArchitectures</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>os</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> win32</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>cpu</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> x64</span><br/></span></code></pre></div></div>
+<p>Whereas this configuration will install optional dependencies for Windows, macOS, and the architecture of the system currently running the install. It includes artifacts for both x64 and arm64 CPUs:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>supportedArchitectures</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>os</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> win32</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> darwin</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> current</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>cpu</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> x64</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> arm64</span><br/></span></code></pre></div></div>
+<p>Additionally, <code>supportedArchitectures</code> also supports specifying the <code>libc</code> of the system.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=ignoredoptionaldependencies>ignoredOptionalDependencies<a href=#ignoredoptionaldependencies class=hash-link aria-label="ignoredOptionalDependencies doğrudan bağlantı" title="ignoredOptionalDependencies doğrudan bağlantı" translate=no>​</a></h3>
+<p>If an optional dependency has its name included in this array, it will be skipped. For example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>ignoredOptionalDependencies</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> fsevents</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"@esbuild/*"</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=minimumreleaseage>minimumReleaseAge<a href=#minimumreleaseage class=hash-link aria-label="minimumReleaseAge doğrudan bağlantı" title="minimumReleaseAge doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.16.0</p>
+<ul>
+<li>Default: <strong>0</strong></li>
+<li>Type: <strong>number (minutes)</strong></li>
+</ul>
+<p>To reduce the risk of installing compromised packages, you can delay the installation of newly published versions. In most cases, malicious releases are discovered and removed from the registry within an hour.</p>
+<p><code>minimumReleaseAge</code> defines the minimum number of minutes that must pass after a version is published before pnpm will install it. This applies to <strong>all dependencies</strong>, including transitive ones.</p>
+<p>For example, the following setting ensures that only packages released at least one day ago can be installed:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>minimumReleaseAge</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>1440</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=minimumreleaseageexclude>minimumReleaseAgeExclude<a href=#minimumreleaseageexclude class=hash-link aria-label="minimumReleaseAgeExclude doğrudan bağlantı" title="minimumReleaseAgeExclude doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.16.0</p>
+<ul>
+<li>Default: <strong>undefined</strong></li>
+<li>Type: <strong>string[]</strong></li>
+</ul>
+<p>If you set <code>minimumReleaseAge</code> but need certain dependencies to always install the newest version immediately, you can list them under <code>minimumReleaseAgeExclude</code>. The exclusion works by <strong>package name</strong> and applies to all versions of that package.</p>
+<p>Example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>minimumReleaseAge</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>1440</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token key atrule" style=color:#00a4db>minimumReleaseAgeExclude</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> react</span><br/></span></code></pre></div></div>
+<p>In this case, all dependencies must be at least a day old, except <code>webpack</code> and <code>react</code>, which are installed immediately upon release.</p>
+<p>Added in: v10.17.0</p>
+<p>You may also use patterns. For instance, allow all packages from your org:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>minimumReleaseAge</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>1440</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token key atrule" style=color:#00a4db>minimumReleaseAgeExclude</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'@myorg/*'</span><br/></span></code></pre></div></div>
+<p>Added in: v10.19.0</p>
+<p>You may also exempt specific versions (or a list of specific versions using a disjunction with <code>||</code>). This allows pinning exceptions to mature-time rules:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>minimumReleaseAge</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>1440</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token key atrule" style=color:#00a4db>minimumReleaseAgeExclude</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> nx@21.6.5</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> webpack@4.47.0 </span><span class="token punctuation" style=color:#393A34>|</span><span class="token punctuation" style=color:#393A34>|</span><span class="token plain"> 5.102.1</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=trustpolicy>trustPolicy<a href=#trustpolicy class=hash-link aria-label="trustPolicy doğrudan bağlantı" title="trustPolicy doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.21.0</p>
+<ul>
+<li>Default: <strong>off</strong></li>
+<li>Type: <strong>no-downgrade</strong> | <strong>off</strong></li>
+</ul>
+<p>When set to <code>no-downgrade</code>, pnpm will fail if a package's trust level has decreased compared to previous releases. For example, if a package was previously published by a trusted publisher but now only has provenance or no trust evidence, installation will fail. This helps prevent installing potentially compromised versions. Trust checks are based solely on publish date, not semver. A package cannot be installed if any earlier-published version had stronger trust evidence. Starting in v10.24.0, prerelease versions are ignored when evaluating trust evidence for a non-prerelease install, so a trusted prerelease cannot block a stable release that lacks trust evidence.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=trustpolicyexclude>trustPolicyExclude<a href=#trustpolicyexclude class=hash-link aria-label="trustPolicyExclude doğrudan bağlantı" title="trustPolicyExclude doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.22.0</p>
+<ul>
+<li>Default: <strong>[]</strong></li>
+<li>Type: <strong>string[]</strong></li>
+</ul>
+<p>A list of package selectors that should be excluded from the trust policy check. This allows you to install specific packages or versions even if they don't satisfy the <code>trustPolicy</code> requirement.</p>
+<p>For example:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>trustPolicy</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> no</span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain">downgrade</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token key atrule" style=color:#00a4db>trustPolicyExclude</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'chokidar@4.0.3'</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'webpack@4.47.0 || 5.102.1'</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'@babel/core@7.28.5'</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=trustpolicyignoreafter>trustPolicyIgnoreAfter<a href=#trustpolicyignoreafter class=hash-link aria-label="trustPolicyIgnoreAfter doğrudan bağlantı" title="trustPolicyIgnoreAfter doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.27.0</p>
+<ul>
+<li>Default: <strong>undefined</strong></li>
+<li>Type: <strong>number (minutes)</strong></li>
+</ul>
+<p>Allows ignoring the trust policy check for packages published more than the specified number of minutes ago. This is useful when enabling strict trust policies, as it allows older versions of packages (which may lack a process for publishing with signatures or provenance) to be installed without manual exclusion, assuming they are safe due to their age.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=blockexoticsubdeps>blockExoticSubdeps<a href=#blockexoticsubdeps class=hash-link aria-label="blockExoticSubdeps doğrudan bağlantı" title="blockExoticSubdeps doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.26.0</p>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>true</code>, only direct dependencies (those listed in your root <code>package.json</code>) may use exotic sources (like git repositories or direct tarball URLs). All transitive dependencies must be resolved from a trusted source, such as the configured registry, local file paths, workspace links, or trusted GitHub repositories (node, bun, deno).</p>
+<p>This setting helps secure the dependency supply chain by preventing transitive dependencies from pulling in code from untrusted locations.</p>
+<p>Exotic sources include:</p>
+<ul>
+<li>Git repositories (<code>git+ssh://...</code>)</li>
+<li>Direct URL links to tarballs (<code>https://.../package.tgz</code>)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=dependency-hoisting-settings>Dependency Hoisting Settings<a href=#dependency-hoisting-settings class=hash-link aria-label="Dependency Hoisting Settings doğrudan bağlantı" title="Dependency Hoisting Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=hoist>hoist<a href=#hoist class=hash-link aria-label="hoist doğrudan bağlantı" title="hoist doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>boolean</strong></li>
+</ul>
+<p>When <code>true</code>, all dependencies are hoisted to <code>node_modules/.pnpm/node_modules</code>. This makes
+unlisted dependencies accessible to all packages inside <code>node_modules</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=hoistworkspacepackages>hoistWorkspacePackages<a href=#hoistworkspacepackages class=hash-link aria-label="hoistWorkspacePackages doğrudan bağlantı" title="hoistWorkspacePackages doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>boolean</strong></li>
+</ul>
+<p>When <code>true</code>, packages from the workspaces are symlinked to either <code>&lt;workspace_root>/node_modules/.pnpm/node_modules</code> or to <code>&lt;workspace_root>/node_modules</code> depending on other hoisting settings (<code>hoistPattern</code> and <code>publicHoistPattern</code>).</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=hoistpattern>hoistPattern<a href=#hoistpattern class=hash-link aria-label="hoistPattern doğrudan bağlantı" title="hoistPattern doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>['*']</strong></li>
+<li>Type: <strong>string[]</strong></li>
+</ul>
+<p>Tells pnpm which packages should be hoisted to <code>node_modules/.pnpm/node_modules</code>. By
+default, all packages are hoisted - however, if you know that only some flawed
+packages have phantom dependencies, you can use this option to exclusively hoist
+the phantom dependencies (recommended).</p>
+<p>For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>hoistPattern</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*eslint*"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*babel*"</span><br/></span></code></pre></div></div>
+<p>You may also exclude patterns from hoisting using <code>!</code>.</p>
+<p>For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>hoistPattern</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*types*"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"!@types/react"</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=publichoistpattern>publicHoistPattern<a href=#publichoistpattern class=hash-link aria-label="publicHoistPattern doğrudan bağlantı" title="publicHoistPattern doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>[]</strong></li>
+<li>Type: <strong>string[]</strong></li>
+</ul>
+<p>Unlike <code>hoistPattern</code>, which hoists dependencies to a hidden modules directory
+inside the virtual store, <code>publicHoistPattern</code> hoists dependencies matching
+the pattern to the root modules directory. Hoisting to the root modules
+directory means that application code will have access to phantom dependencies,
+even if they modify the resolution strategy improperly.</p>
+<p>This setting is useful when dealing with some flawed pluggable tools that don't
+resolve dependencies properly.</p>
+<p>For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>publicHoistPattern</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*plugin*"</span><br/></span></code></pre></div></div>
+<p>Note: Setting <code>shamefullyHoist</code> to <code>true</code> is the same as setting
+<code>publicHoistPattern</code> to <code>*</code>.</p>
+<p>You may also exclude patterns from hoisting using <code>!</code>.</p>
+<p>For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>publicHoistPattern</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*types*"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"!@types/react"</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=shamefullyhoist>shamefullyHoist<a href=#shamefullyhoist class=hash-link aria-label="shamefullyHoist doğrudan bağlantı" title="shamefullyHoist doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>By default, pnpm creates a semistrict <code>node_modules</code>, meaning dependencies have
+access to undeclared dependencies but modules outside of <code>node_modules</code> do not.
+With this layout, most of the packages in the ecosystem work with no issues.
+However, if some tooling only works when the hoisted dependencies are in the
+root of <code>node_modules</code>, you can set this to <code>true</code> to hoist them for you.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=node-modules-settings>Node-Modules Settings<a href=#node-modules-settings class=hash-link aria-label="Node-Modules Settings doğrudan bağlantı" title="Node-Modules Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=modulesdir>modulesDir<a href=#modulesdir class=hash-link aria-label="modulesDir doğrudan bağlantı" title="modulesDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>node_modules</strong></li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>The directory in which dependencies will be installed (instead of
+<code>node_modules</code>).</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=nodelinker>nodeLinker<a href=#nodelinker class=hash-link aria-label="nodeLinker doğrudan bağlantı" title="nodeLinker doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>isolated</strong></li>
+<li>Type: <strong>isolated</strong>, <strong>hoisted</strong>, <strong>pnp</strong></li>
+</ul>
+<p>Defines what linker should be used for installing Node packages.</p>
+<ul>
+<li><strong>isolated</strong> - dependencies are symlinked from a virtual store at <code>node_modules/.pnpm</code>.</li>
+<li><strong>hoisted</strong> - a flat <code>node_modules</code> without symlinks is created. Same as the <code>node_modules</code> created by npm or Yarn Classic. One of Yarn's libraries is used for hoisting, when this setting is used. Legitimate reasons to use this setting:<!-- -->
+<ol>
+<li>Your tooling doesn't work well with symlinks. A React Native project will most probably only work if you use a hoisted <code>node_modules</code>.</li>
+<li>Your project is deployed to a serverless hosting provider. Some serverless providers (for instance, AWS Lambda) don't support symlinks. An alternative solution for this problem is to bundle your application before deployment.</li>
+<li>If you want to publish your package with <a href=https://docs.npmjs.com/cli/v8/configuring-npm/package-json#bundleddependencies target=_blank rel="noopener noreferrer"><code>"bundledDependencies"</code></a>.</li>
+<li>If you are running Node.js with the <a href=https://nodejs.org/api/cli.html#cli_preserve_symlinks target=_blank rel="noopener noreferrer">--preserve-symlinks</a> flag.</li>
+</ol>
+</li>
+<li><strong>pnp</strong> - no <code>node_modules</code>. Plug'n'Play is an innovative strategy for Node that is <a href=https://yarnpkg.com/features/pnp target=_blank rel="noopener noreferrer">used by Yarn Berry</a>. It is recommended to also set <code>symlink</code> setting to <code>false</code> when using <code>pnp</code> as
+your linker.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=symlink>symlink<a href=#symlink class=hash-link aria-label="symlink doğrudan bağlantı" title="symlink doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>symlink</code> is set to <code>false</code>, pnpm creates a virtual store directory without
+any symlinks. It is a useful setting together with <code>nodeLinker=pnp</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=enablemodulesdir>enableModulesDir<a href=#enablemodulesdir class=hash-link aria-label="enableModulesDir doğrudan bağlantı" title="enableModulesDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>false</code>, pnpm will not write any files to the modules directory
+(<code>node_modules</code>). This is useful for when the modules directory is mounted with
+filesystem in userspace (FUSE). There is an experimental CLI that allows you to
+mount a modules directory with FUSE: <a href=https://www.npmjs.com/package/@pnpm/mount-modules target=_blank rel="noopener noreferrer">@pnpm/mount-modules</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=virtualstoredir>virtualStoreDir<a href=#virtualstoredir class=hash-link aria-label="virtualStoreDir doğrudan bağlantı" title="virtualStoreDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>node_modules/.pnpm</strong></li>
+<li>Types: <strong>path</strong></li>
+</ul>
+<p>The directory with links to the store. All direct and indirect dependencies of
+the project are linked into this directory.</p>
+<p>This is a useful setting that can solve issues with long paths on Windows. If
+you have some dependencies with very long paths, you can select a virtual store
+in the root of your drive (for instance <code>C:\my-project-store</code>).</p>
+<p>Or you can set the virtual store to <code>.pnpm</code> and add it to <code>.gitignore</code>. This
+will make stacktraces cleaner as paths to dependencies will be one directory
+higher.</p>
+<p><strong>NOTE:</strong> the virtual store cannot be shared between several projects. Every
+project should have its own virtual store (except for in workspaces where the
+root is shared).</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=virtualstoredirmaxlength>virtualStoreDirMaxLength<a href=#virtualstoredirmaxlength class=hash-link aria-label="virtualStoreDirMaxLength doğrudan bağlantı" title="virtualStoreDirMaxLength doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default:<!-- -->
+<ul>
+<li>On Linux/macOS: <strong>120</strong></li>
+<li>On Windows: <strong>60</strong></li>
+</ul>
+</li>
+<li>Types: <strong>number</strong></li>
+</ul>
+<p>Sets the maximum allowed length of directory names inside the virtual store directory (<code>node_modules/.pnpm</code>). You may set this to a lower number if you encounter long path issues on Windows.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=virtualstoreonly>virtualStoreOnly<a href=#virtualstoreonly class=hash-link aria-label="virtualStoreOnly doğrudan bağlantı" title="virtualStoreOnly doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v11.0.0</p>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>true</code>, pnpm populates the virtual store without creating importer symlinks, hoisting, bin links, or running lifecycle scripts. This is useful for pre-populating a store (e.g., in Nix builds) without creating unnecessary project-level artifacts. <code>pnpm fetch</code> uses this mode internally.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=packageimportmethod>packageImportMethod<a href=#packageimportmethod class=hash-link aria-label="packageImportMethod doğrudan bağlantı" title="packageImportMethod doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>auto</strong></li>
+<li>Type: <strong>auto</strong>, <strong>hardlink</strong>, <strong>copy</strong>, <strong>clone</strong>, <strong>clone-or-copy</strong></li>
+</ul>
+<p>Controls the way packages are imported from the store (if you want to disable symlinks inside <code>node_modules</code>, then you need to change the <a href=#nodeLinker>nodeLinker</a> setting, not this one).</p>
+<ul>
+<li><strong>auto</strong> - try to clone packages from the store. If cloning is not supported
+then hardlink packages from the store. If neither cloning nor linking is
+possible, fall back to copying</li>
+<li><strong>hardlink</strong> - hard link packages from the store</li>
+<li><strong>clone-or-copy</strong> - try to clone packages from the store. If cloning is not supported then fall back to copying</li>
+<li><strong>copy</strong> - copy packages from the store</li>
+<li><strong>clone</strong> - clone (AKA copy-on-write or reference link) packages from the store</li>
+</ul>
+<p>Cloning is the best way to write packages to node_modules. It is the fastest way and safest way. When cloning is used, you may edit files in your node_modules and they will not be modified in the central content-addressable store.</p>
+<p>Unfortunately, not all file systems support cloning. We recommend using a copy-on-write (CoW) file system (for instance, Btrfs instead of Ext4 on Linux) for the best experience with pnpm.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=modulescachemaxage>modulesCacheMaxAge<a href=#modulescachemaxage class=hash-link aria-label="modulesCacheMaxAge doğrudan bağlantı" title="modulesCacheMaxAge doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>10080</strong> (7 days in minutes)</li>
+<li>Type: <strong>number</strong></li>
+</ul>
+<p>The time in minutes after which orphan packages from the modules directory should be removed.
+pnpm keeps a cache of packages in the modules directory. This boosts installation speed when
+switching branches or downgrading dependencies.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=dlxcachemaxage>dlxCacheMaxAge<a href=#dlxcachemaxage class=hash-link aria-label="dlxCacheMaxAge doğrudan bağlantı" title="dlxCacheMaxAge doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>1440</strong> (1 day in minutes)</li>
+<li>Type: <strong>number</strong></li>
+</ul>
+<p>The time in minutes after which dlx cache expires.
+After executing a dlx command, pnpm keeps a cache that omits the installation step for subsequent calls to the same dlx command.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=enableglobalvirtualstore>enableGlobalVirtualStore<a href=#enableglobalvirtualstore class=hash-link aria-label="enableGlobalVirtualStore doğrudan bağlantı" title="enableGlobalVirtualStore doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.12.1</p>
+<ul>
+<li>Default: <strong>false</strong> (always <strong>false</strong> in CI)</li>
+<li>Type: <strong>Boolean</strong></li>
+<li>Status: <strong>Experimental</strong></li>
+</ul>
+<p>When enabled, <code>node_modules</code> contains only symlinks to a central virtual store, rather than to <code>node_modules/.pnpm</code>. By default, this central store is located at <code>&lt;store-path>/links</code> (use <code>pnpm store path</code> to find <code>&lt;store-path></code>).</p>
+<p>In the central virtual store, each package is hard linked into a directory whose name is the hash of its dependency graph. As a result, all projects on the system can symlink their dependencies from this shared location on disk. This approach is conceptually similar to how <a href=https://nixos.org/guides/how-nix-works/ target=_blank rel="noopener noreferrer">NixOS manages packages</a>, using dependency graph hashes to create isolated and shareable package directories in the Nix store.</p>
+<blockquote>
+<p>This should not be confused with the global content-addressable store. The actual package files are still hard linked from the content-addressable store—but instead of being linked directly into <code>node_modules/.pnpm</code>, they are linked into the global virtual store.</p>
+</blockquote>
+<p>Using a global virtual store can significantly speed up installations when a warm cache is available. However, in CI environments (where caches are typically absent), it may slow down installation. If pnpm detects that it is running in CI, this setting is automatically disabled.</p>
+<div class="theme-admonition theme-admonition-important admonition_g_IF alert alert--info"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>important</div><div class=admonitionContent_e01q><p>To support hoisted dependencies when using a global virtual store, pnpm relies on the <code>NODE_PATH</code> environment variable. This allows Node.js to resolve packages from the hoisted <code>node_modules</code> directory. However, <strong>this workaround does not work with ESM modules</strong>, because Node.js no longer respects <code>NODE_PATH</code> when using ESM.<p>If your dependencies are ESM and they import packages <strong>not declared in their own <code>package.json</code></strong> (which is considered bad practice), you’ll likely run into resolution errors. There are two ways to fix this:<ul>
+<li>Use <a href=#packageextensions>packageExtensions</a> to explicitly add the missing dependencies.</li>
+<li>Add the <a href=https://github.com/pnpm/plugin-esm-node-path target=_blank rel="noopener noreferrer">@pnpm/plugin-esm-node-path</a> config dependency to your project. This plugin registers a custom ESM loader that restores <code>NODE_PATH</code> support for ESM, allowing hoisted dependencies to be resolved correctly.</li>
+</ul></div></div>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=store-settings>Store Settings<a href=#store-settings class=hash-link aria-label="Store Settings doğrudan bağlantı" title="Store Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=storedir>storeDir<a href=#storedir class=hash-link aria-label="storeDir doğrudan bağlantı" title="storeDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default:<!-- -->
+<ul>
+<li>If the <strong>$PNPM_HOME</strong> env variable is set, then <strong>$PNPM_HOME/store</strong></li>
+<li>If the <strong>$XDG_DATA_HOME</strong> env variable is set, then <strong>$XDG_DATA_HOME/pnpm/store</strong></li>
+<li>On Windows: <strong>~/AppData/Local/pnpm/store</strong></li>
+<li>On macOS: <strong>~/Library/pnpm/store</strong></li>
+<li>On Linux: <strong>~/.local/share/pnpm/store</strong></li>
+</ul>
+</li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>The location where all the packages are saved on the disk.</p>
+<p>The store should be always on the same disk on which installation is happening,
+so there will be one store per disk. If there is a home directory on the current
+disk, then the store is created inside it. If there is no home on the disk,
+then the store is created at the root of the filesystem. For
+example, if installation is happening on a filesystem mounted at <code>/mnt</code>,
+then the store will be created at <code>/mnt/.pnpm-store</code>. The same goes for Windows
+systems.</p>
+<p>It is possible to set a store from a different disk but in that case pnpm will
+copy packages from the store instead of hard-linking them, as hard links are
+only possible on the same filesystem.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=verifystoreintegrity>verifyStoreIntegrity<a href=#verifystoreintegrity class=hash-link aria-label="verifyStoreIntegrity doğrudan bağlantı" title="verifyStoreIntegrity doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>By default, if a file in the store has been modified, the content of this file is checked before linking it to a project's <code>node_modules</code>. If <code>verifyStoreIntegrity</code> is set to <code>false</code>, files in the content-addressable store will not be checked during installation.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=userunningstoreserver>useRunningStoreServer<a href=#userunningstoreserver class=hash-link aria-label="useRunningStoreServer doğrudan bağlantı" title="useRunningStoreServer doğrudan bağlantı" translate=no>​</a></h3>
+<div class="theme-admonition theme-admonition-danger admonition_g_IF alert alert--danger"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"/></svg></span>tehlike</div><div class=admonitionContent_e01q><p>Deprecated feature</div></div>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Only allows installation with a store server. If no store server is running,
+installation will fail.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=strictstorepkgcontentcheck>strictStorePkgContentCheck<a href=#strictstorepkgcontentcheck class=hash-link aria-label="strictStorePkgContentCheck doğrudan bağlantı" title="strictStorePkgContentCheck doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Some registries allow the exact same content to be published under different package names and/or versions. This breaks the validity checks of packages in the store. To avoid errors when verifying the names and versions of such packages in the store, you may set the <code>strictStorePkgContentCheck</code> setting to <code>false</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=lockfile-settings>Lockfile Settings<a href=#lockfile-settings class=hash-link aria-label="Lockfile Settings doğrudan bağlantı" title="Lockfile Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=lockfile>lockfile<a href=#lockfile class=hash-link aria-label="lockfile doğrudan bağlantı" title="lockfile doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>false</code>, pnpm won't read or generate a <code>pnpm-lock.yaml</code> file.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=preferfrozenlockfile>preferFrozenLockfile<a href=#preferfrozenlockfile class=hash-link aria-label="preferFrozenLockfile doğrudan bağlantı" title="preferFrozenLockfile doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>true</code> and the available <code>pnpm-lock.yaml</code> satisfies the
+<code>package.json</code> dependencies directive, a headless installation is performed. A
+headless installation skips all dependency resolution as it does not need to
+modify the lockfile.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=lockfileincludetarballurl>lockfileIncludeTarballUrl<a href=#lockfileincludetarballurl class=hash-link aria-label="lockfileIncludeTarballUrl doğrudan bağlantı" title="lockfileIncludeTarballUrl doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Add the full URL to the package's tarball to every entry in <code>pnpm-lock.yaml</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=gitbranchlockfile>gitBranchLockfile<a href=#gitbranchlockfile class=hash-link aria-label="gitBranchLockfile doğrudan bağlantı" title="gitBranchLockfile doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>true</code>, the generated lockfile name after installation will be named
+based on the current branch name to completely avoid merge conflicts. For example,
+if the current branch name is <code>feature-foo</code>, the corresponding lockfile name will
+be <code>pnpm-lock.feature-foo.yaml</code> instead of <code>pnpm-lock.yaml</code>. It is typically used
+in conjunction with the command line argument <code>--merge-git-branch-lockfiles</code> or by
+setting <code>mergeGitBranchLockfilesBranchPattern</code> in the <code>pnpm-workspace.yaml</code> file.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=mergegitbranchlockfilesbranchpattern>mergeGitBranchLockfilesBranchPattern<a href=#mergegitbranchlockfilesbranchpattern class=hash-link aria-label="mergeGitBranchLockfilesBranchPattern doğrudan bağlantı" title="mergeGitBranchLockfilesBranchPattern doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>null</strong></li>
+<li>Type: <strong>Array or null</strong></li>
+</ul>
+<p>This configuration matches the current branch name to determine whether to merge
+all git branch lockfile files. By default, you need to manually pass the
+<code>--merge-git-branch-lockfiles</code> command line parameter. This configuration allows
+this process to be automatically completed.</p>
+<p>For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>mergeGitBranchLockfilesBranchPattern</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> main</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> release*</span><br/></span></code></pre></div></div>
+<p>You may also exclude patterns using <code>!</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=peerssuffixmaxlength>peersSuffixMaxLength<a href=#peerssuffixmaxlength class=hash-link aria-label="peersSuffixMaxLength doğrudan bağlantı" title="peersSuffixMaxLength doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>1000</strong></li>
+<li>Type: <strong>number</strong></li>
+</ul>
+<p>Max length of the peer IDs suffix added to dependency keys in the lockfile. If the suffix is longer, it is replaced with a hash.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=request-settings>Request Settings<a href=#request-settings class=hash-link aria-label="Request Settings doğrudan bağlantı" title="Request Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=gitshallowhosts>gitShallowHosts<a href=#gitshallowhosts class=hash-link aria-label="gitShallowHosts doğrudan bağlantı" title="gitShallowHosts doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>['github.com', 'gist.github.com', 'gitlab.com', 'bitbucket.com', 'bitbucket.org']</strong></li>
+<li>Type: <strong>string[]</strong></li>
+</ul>
+<p>When fetching dependencies that are Git repositories, if the host is listed in this setting, pnpm will use shallow cloning to fetch only the needed commit, not all the history.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=networkconcurrency>networkConcurrency<a href=#networkconcurrency class=hash-link aria-label="networkConcurrency doğrudan bağlantı" title="networkConcurrency doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>auto (workers × 3 clamped to 16-64)</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>Controls the maximum number of HTTP(S) requests to process simultaneously.</p>
+<p>As of v10.24.0, pnpm automatically selects a value between 16 and 64 based on the number of workers (networkConcurrency = clamp(workers × 3, 16, 64)). Set this value explicitly to override the automatic scaling.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchretries>fetchRetries<a href=#fetchretries class=hash-link aria-label="fetchRetries doğrudan bağlantı" title="fetchRetries doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>2</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>How many times to retry if pnpm fails to fetch from the registry.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchretryfactor>fetchRetryFactor<a href=#fetchretryfactor class=hash-link aria-label="fetchRetryFactor doğrudan bağlantı" title="fetchRetryFactor doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>10</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>The exponential factor for retry backoff.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchretrymintimeout>fetchRetryMintimeout<a href=#fetchretrymintimeout class=hash-link aria-label="fetchRetryMintimeout doğrudan bağlantı" title="fetchRetryMintimeout doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>10000 (10 seconds)</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>The minimum (base) timeout for retrying requests.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchretrymaxtimeout>fetchRetryMaxtimeout<a href=#fetchretrymaxtimeout class=hash-link aria-label="fetchRetryMaxtimeout doğrudan bağlantı" title="fetchRetryMaxtimeout doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>60000 (1 minute)</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>The maximum fallback timeout to ensure the retry factor does not make requests
+too long.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchtimeout>fetchTimeout<a href=#fetchtimeout class=hash-link aria-label="fetchTimeout doğrudan bağlantı" title="fetchTimeout doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>60000 (1 minute)</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>The maximum amount of time to wait for HTTP requests to complete.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchwarntimeoutms>fetchWarnTimeoutMs<a href=#fetchwarntimeoutms class=hash-link aria-label="fetchWarnTimeoutMs doğrudan bağlantı" title="fetchWarnTimeoutMs doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.18.0</p>
+<ul>
+<li>Default: <strong>10000 ms (10 seconds)</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>A warning message is displayed if a metadata request to the registry takes longer than the specified threshold (in milliseconds).</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=fetchminspeedkibps>fetchMinSpeedKiBps<a href=#fetchminspeedkibps class=hash-link aria-label="fetchMinSpeedKiBps doğrudan bağlantı" title="fetchMinSpeedKiBps doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.18.0</p>
+<ul>
+<li>Default: <strong>50 KiB/s</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>A warning message is displayed if the download speed of a tarball from the registry falls below the specified threshold (in KiB/s).</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=peer-dependency-settings>Peer Dependency Settings<a href=#peer-dependency-settings class=hash-link aria-label="Peer Dependency Settings doğrudan bağlantı" title="Peer Dependency Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=autoinstallpeers>autoInstallPeers<a href=#autoinstallpeers class=hash-link aria-label="autoInstallPeers doğrudan bağlantı" title="autoInstallPeers doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>true</code>, any missing non-optional peer dependencies are automatically installed.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=version-conflicts>Version Conflicts<a href=#version-conflicts class=hash-link aria-label="Version Conflicts doğrudan bağlantı" title="Version Conflicts doğrudan bağlantı" translate=no>​</a></h4>
+<p>If there are conflicting version requirements for a peer dependency from different packages, pnpm will not install any version of the conflicting peer dependency automatically. Instead, a warning is printed. For example, if one dependency requires <code>react@^16.0.0</code> and another requires <code>react@^17.0.0</code>, these requirements conflict, and no automatic installation will occur.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=conflict-resolution>Conflict Resolution<a href=#conflict-resolution class=hash-link aria-label="Conflict Resolution doğrudan bağlantı" title="Conflict Resolution doğrudan bağlantı" translate=no>​</a></h4>
+<p>In case of a version conflict, you'll need to evaluate which version of the peer dependency to install yourself, or update the dependencies to align their peer dependency requirements.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=dedupepeerdependents>dedupePeerDependents<a href=#dedupepeerdependents class=hash-link aria-label="dedupePeerDependents doğrudan bağlantı" title="dedupePeerDependents doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When this setting is set to <code>true</code>, packages with peer dependencies will be deduplicated after peers resolution.</p>
+<p>For instance, let's say we have a workspace with two projects and both of them have <code>webpack</code> in their dependencies. <code>webpack</code> has <code>esbuild</code> in its optional peer dependencies, and one of the projects has <code>esbuild</code> in its dependencies. In this case, pnpm will link two instances of <code>webpack</code> to the <code>node_modules/.pnpm</code> directory: one with <code>esbuild</code> and another one without it:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-text codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token plain">node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  .pnpm</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack@1.0.0_esbuild@1.0.0</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack@1.0.0</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">project1</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack -> ../../node_modules/.pnpm/webpack@1.0.0/node_modules/webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">project2</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack -> ../../node_modules/.pnpm/webpack@1.0.0_esbuild@1.0.0/node_modules/webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    esbuild</span><br/></span></code></pre></div></div>
+<p>This makes sense because <code>webpack</code> is used in two projects, and one of the projects doesn't have <code>esbuild</code>, so the two projects cannot share the same instance of <code>webpack</code>. However, this is not what most developers expect, especially since in a hoisted <code>node_modules</code>, there would only be one instance of <code>webpack</code>. Therefore, you may now use the <code>dedupePeerDependents</code> setting to deduplicate <code>webpack</code> when it has no conflicting peer dependencies (explanation at the end). In this case, if we set <code>dedupePeerDependents</code> to <code>true</code>, both projects will use the same <code>webpack</code> instance, which is the one that has <code>esbuild</code> resolved:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-text codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token plain">node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  .pnpm</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack@1.0.0_esbuild@1.0.0</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">project1</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack -> ../../node_modules/.pnpm/webpack@1.0.0_esbuild@1.0.0/node_modules/webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">project2</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack -> ../../node_modules/.pnpm/webpack@1.0.0_esbuild@1.0.0/node_modules/webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    esbuild</span><br/></span></code></pre></div></div>
+<p><strong>What are conflicting peer dependencies?</strong> By conflicting peer dependencies we mean a scenario like the following one:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-text codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token plain">node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  .pnpm</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack@1.0.0_react@16.0.0_esbuild@1.0.0</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack@1.0.0_react@17.0.0</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">project1</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack -> ../../node_modules/.pnpm/webpack@1.0.0/node_modules/webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    react (v17)</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">project2</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  node_modules</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    webpack -> ../../node_modules/.pnpm/webpack@1.0.0_esbuild@1.0.0/node_modules/webpack</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    esbuild</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    react (v16)</span><br/></span></code></pre></div></div>
+<p>In this case, we cannot dedupe <code>webpack</code> as <code>webpack</code> has <code>react</code> in its peer dependencies and <code>react</code> is resolved from two different versions in the context of the two projects.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=strictpeerdependencies>strictPeerDependencies<a href=#strictpeerdependencies class=hash-link aria-label="strictPeerDependencies doğrudan bağlantı" title="strictPeerDependencies doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>If this is enabled, commands will fail if there is a missing or invalid peer
+dependency in the tree.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=resolvepeersfromworkspaceroot>resolvePeersFromWorkspaceRoot<a href=#resolvepeersfromworkspaceroot class=hash-link aria-label="resolvePeersFromWorkspaceRoot doğrudan bağlantı" title="resolvePeersFromWorkspaceRoot doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When enabled, dependencies of the root workspace project are used to resolve peer dependencies of any projects in the workspace.
+It is a useful feature as you can install your peer dependencies only in the root of the workspace, and you can be sure that all projects in the workspace use the same versions of the peer dependencies.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=peerdependencyrules>peerDependencyRules<a href=#peerdependencyrules class=hash-link aria-label="peerDependencyRules doğrudan bağlantı" title="peerDependencyRules doğrudan bağlantı" translate=no>​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=peerdependencyrulesignoremissing>peerDependencyRules.ignoreMissing<a href=#peerdependencyrulesignoremissing class=hash-link aria-label="peerDependencyRules.ignoreMissing doğrudan bağlantı" title="peerDependencyRules.ignoreMissing doğrudan bağlantı" translate=no>​</a></h4>
+<p>pnpm will not print warnings about missing peer dependencies from this list.</p>
+<p>For instance, with the following configuration, pnpm will not print warnings if a dependency needs <code>react</code> but <code>react</code> is not installed:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>peerDependencyRules</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>ignoreMissing</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> react</span><br/></span></code></pre></div></div>
+<p>Package name patterns may also be used:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>peerDependencyRules</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>ignoreMissing</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"@babel/*"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"@eslint/*"</span><br/></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=peerdependencyrulesallowedversions>peerDependencyRules.allowedVersions<a href=#peerdependencyrulesallowedversions class=hash-link aria-label="peerDependencyRules.allowedVersions doğrudan bağlantı" title="peerDependencyRules.allowedVersions doğrudan bağlantı" translate=no>​</a></h4>
+<p>Unmet peer dependency warnings will not be printed for peer dependencies of the specified range.</p>
+<p>For instance, if you have some dependencies that need <code>react@16</code> but you know that they work fine with <code>react@17</code>, then you may use the following configuration:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>peerDependencyRules</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>allowedVersions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>react</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"17"</span><br/></span></code></pre></div></div>
+<p>This will tell pnpm that any dependency that has react in its peer dependencies should allow <code>react</code> v17 to be installed.</p>
+<p>It is also possible to suppress the warnings only for peer dependencies of specific packages. For instance, with the following configuration <code>react</code> v17 will be only allowed when it is in the peer dependencies of the <code>button</code> v2 package or in the dependencies of any <code>card</code> package:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>peerDependencyRules</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>allowedVersions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>"button@2>react"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"17"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token key atrule" style=color:#00a4db>"card>react"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"17"</span><br/></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=peerdependencyrulesallowany>peerDependencyRules.allowAny<a href=#peerdependencyrulesallowany class=hash-link aria-label="peerDependencyRules.allowAny doğrudan bağlantı" title="peerDependencyRules.allowAny doğrudan bağlantı" translate=no>​</a></h4>
+<p><code>allowAny</code> is an array of package name patterns, any peer dependency matching the pattern will be resolved from any version, regardless of the range specified in <code>peerDependencies</code>. For instance:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>peerDependencyRules</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>allowAny</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"@babel/*"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"eslint"</span><br/></span></code></pre></div></div>
+<p>The above setting will mute any warnings about peer dependency version mismatches related to <code>@babel/</code> packages or <code>eslint</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=cli-settings>CLI Settings<a href=#cli-settings class=hash-link aria-label="CLI Settings doğrudan bağlantı" title="CLI Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=no-color>[no-]color<a href=#no-color class=hash-link aria-label="[no-]color doğrudan bağlantı" title="[no-]color doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>auto</strong></li>
+<li>Type: <strong>auto</strong>, <strong>always</strong>, <strong>never</strong></li>
+</ul>
+<p>Controls colors in the output.</p>
+<ul>
+<li><strong>auto</strong> - output uses colors when the standard output is a terminal or TTY.</li>
+<li><strong>always</strong> - ignore the difference between terminals and pipes. You’ll rarely
+want this; in most scenarios, if you want color codes in your redirected
+output, you can instead pass a <code>--color</code> flag to the pnpm command to force it
+to use color codes. The default setting is almost always what you’ll want.</li>
+<li><strong>never</strong> - turns off colors. This is the setting used by <code>--no-color</code>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=loglevel>loglevel<a href=#loglevel class=hash-link aria-label="loglevel doğrudan bağlantı" title="loglevel doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>info</strong></li>
+<li>Type: <strong>debug</strong>, <strong>info</strong>, <strong>warn</strong>, <strong>error</strong></li>
+</ul>
+<p>Any logs at or higher than the given level will be shown.
+You can instead pass <code>--silent</code> to turn off all output logs.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=usebetacli>useBetaCli<a href=#usebetacli class=hash-link aria-label="useBetaCli doğrudan bağlantı" title="useBetaCli doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Experimental option that enables beta features of the CLI. This means that you
+may get some changes to the CLI functionality that are breaking changes, or
+potentially bugs.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=recursiveinstall>recursiveInstall<a href=#recursiveinstall class=hash-link aria-label="recursiveInstall doğrudan bağlantı" title="recursiveInstall doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>If this is enabled, the primary behaviour of <code>pnpm install</code> becomes that of
+<code>pnpm install -r</code>, meaning the install is performed on all workspace or
+subdirectory packages.</p>
+<p>Else, <code>pnpm install</code> will exclusively build the package in the current
+directory.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=enginestrict>engineStrict<a href=#enginestrict class=hash-link aria-label="engineStrict doğrudan bağlantı" title="engineStrict doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>If this is enabled, pnpm will not install any package that claims to not be
+compatible with the current Node version.</p>
+<p>Regardless of this configuration, installation will always fail if a project
+(not a dependency) specifies an incompatible version in its <code>engines</code> field.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=npmpath>npmPath<a href=#npmpath class=hash-link aria-label="npmPath doğrudan bağlantı" title="npmPath doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>The location of the npm binary that pnpm uses for some actions, like publishing.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=packagemanagerstrict>packageManagerStrict<a href=#packagemanagerstrict class=hash-link aria-label="packageManagerStrict doğrudan bağlantı" title="packageManagerStrict doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>If this setting is disabled, pnpm will not fail if a different package manager is specified in the <code>packageManager</code> field of <code>package.json</code>. When enabled, only the package name is checked (since pnpm v9.2.0), so you can still run any version of pnpm regardless of the version specified in the <code>packageManager</code> field.</p>
+<p>Alternatively, you can disable this setting by setting the <code>COREPACK_ENABLE_STRICT</code> environment variable to <code>0</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=packagemanagerstrictversion>packageManagerStrictVersion<a href=#packagemanagerstrictversion class=hash-link aria-label="packageManagerStrictVersion doğrudan bağlantı" title="packageManagerStrictVersion doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When enabled, pnpm will fail if its version doesn't exactly match the version specified in the <code>packageManager</code> field of <code>package.json</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=managepackagemanagerversions>managePackageManagerVersions<a href=#managepackagemanagerversions class=hash-link aria-label="managePackageManagerVersions doğrudan bağlantı" title="managePackageManagerVersions doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When enabled, pnpm will automatically download and run the version of pnpm specified in the <code>packageManager</code> field of <code>package.json</code>. This is the same field used by Corepack. Example:</p>
+<div class="language-json codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-json codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token property" style=color:#36acaa>"packageManager"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"pnpm@9.3.0"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=build-settings>Build Settings<a href=#build-settings class=hash-link aria-label="Build Settings doğrudan bağlantı" title="Build Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=ignorescripts>ignoreScripts<a href=#ignorescripts class=hash-link aria-label="ignoreScripts doğrudan bağlantı" title="ignoreScripts doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Do not execute any scripts defined in the project <code>package.json</code> and its
+dependencies.</p>
+<div class="theme-admonition theme-admonition-note admonition_g_IF alert alert--secondary"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>not</div><div class=admonitionContent_e01q><p>This flag does not prevent the execution of <a href=/tr/next/pnpmfile>.pnpmfile.mjs</a></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=ignoredepscripts>ignoreDepScripts<a href=#ignoredepscripts class=hash-link aria-label="ignoreDepScripts doğrudan bağlantı" title="ignoreDepScripts doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Do not execute any scripts of the installed packages. Scripts of the projects are executed.</p>
+<div class="theme-admonition theme-admonition-note admonition_g_IF alert alert--secondary"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>not</div><div class=admonitionContent_e01q><p>Since v10, pnpm doesn't run the lifecycle scripts of dependencies unless they are listed in <a href=/tr/next/settings#allowbuilds><code>allowBuilds</code></a>.</div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=childconcurrency>childConcurrency<a href=#childconcurrency class=hash-link aria-label="childConcurrency doğrudan bağlantı" title="childConcurrency doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>5</strong></li>
+<li>Type: <strong>Number</strong></li>
+</ul>
+<p>The maximum number of child processes to allocate simultaneously to build
+node_modules.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=sideeffectscache>sideEffectsCache<a href=#sideeffectscache class=hash-link aria-label="sideEffectsCache doğrudan bağlantı" title="sideEffectsCache doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Use and cache the results of (pre/post)install hooks.</p>
+<p>When a pre/post install script modify the contents of a package (e.g. build output), pnpm saves the modified package in the global store. On future installs on the same machine, pnpm reuses this cached, prebuilt version—making installs significantly faster.</p>
+<div class="theme-admonition theme-admonition-note admonition_g_IF alert alert--secondary"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>not</div><div class=admonitionContent_e01q><p>You may want to disable this setting if:<ol>
+<li>The install scripts modify files <em>outside</em> the package directory (pnpm cannot track or cache these changes).</li>
+<li>The scripts perform side effects that are unrelated to building the package.</li>
+</ol></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=sideeffectscachereadonly>sideEffectsCacheReadonly<a href=#sideeffectscachereadonly class=hash-link aria-label="sideEffectsCacheReadonly doğrudan bağlantı" title="sideEffectsCacheReadonly doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Only use the side effects cache if present, do not create it for new packages.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=unsafeperm>unsafePerm<a href=#unsafeperm class=hash-link aria-label="unsafePerm doğrudan bağlantı" title="unsafePerm doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong> IF running as root, ELSE <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Set to true to enable UID/GID switching when running package scripts.
+If set explicitly to false, then installing as a non-root user will fail.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=nodeoptions>nodeOptions<a href=#nodeoptions class=hash-link aria-label="nodeOptions doğrudan bağlantı" title="nodeOptions doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>NULL</strong></li>
+<li>Type: <strong>String</strong></li>
+</ul>
+<p>Options to pass through to Node.js via the <code>NODE_OPTIONS</code> environment variable. This does not impact how pnpm itself is executed but it does impact how lifecycle scripts are called.</p>
+<p>To preserve existing <code>NODE_OPTIONS</code> you can reference the existing environment variable using <code>${NODE_OPTIONS}</code> in your configuration:</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>nodeOptions</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"${NODE_OPTIONS:- } --experimental-vm-modules"</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=verifydepsbeforerun>verifyDepsBeforeRun<a href=#verifydepsbeforerun class=hash-link aria-label="verifyDepsBeforeRun doğrudan bağlantı" title="verifyDepsBeforeRun doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>install</strong></li>
+<li>Type: <strong>install</strong>, <strong>warn</strong>, <strong>error</strong>, <strong>prompt</strong>, <strong>false</strong></li>
+</ul>
+<p>This setting allows the checking of the state of dependencies before running scripts. The check runs on <code>pnpm run</code> and <code>pnpm exec</code> commands. The following values are supported:</p>
+<ul>
+<li><code>install</code> - Automatically runs install if <code>node_modules</code> is not up to date.</li>
+<li><code>warn</code> - Prints a warning if <code>node_modules</code> is not up to date.</li>
+<li><code>prompt</code> - Prompts the user for permission to run install if <code>node_modules</code> is not up to date.</li>
+<li><code>error</code> - Throws an error if <code>node_modules</code> is not up to date.</li>
+<li><code>false</code> - Disables dependency checks.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=strictdepbuilds>strictDepBuilds<a href=#strictdepbuilds class=hash-link aria-label="strictDepBuilds doğrudan bağlantı" title="strictDepBuilds doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.3.0</p>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>strictDepBuilds</code> is enabled, the installation will exit with a non-zero exit code if any dependencies have unreviewed build scripts (aka postinstall scripts).</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=allowbuilds>allowBuilds<a href=#allowbuilds class=hash-link aria-label="allowBuilds doğrudan bağlantı" title="allowBuilds doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.26.0</p>
+<p>A map of package matchers to explicitly allow (<code>true</code>) or disallow (<code>false</code>) script execution.</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>allowBuilds</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>esbuild</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token boolean important" style=color:#36acaa>true</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>core-js</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token boolean important" style=color:#36acaa>false</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token key atrule" style=color:#00a4db>nx@21.6.4 || 21.6.5</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token boolean important" style=color:#36acaa>true</span><br/></span></code></pre></div></div>
+<p><strong>Default behavior:</strong> Packages not listed in <code>allowBuilds</code> are disallowed by default and an error is printed (since <a href=#strictdepbuilds><code>strictDepBuilds</code></a> is <code>true</code> by default). If <code>strictDepBuilds</code> is set to <code>false</code>, a warning is printed instead.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=dangerouslyallowallbuilds>dangerouslyAllowAllBuilds<a href=#dangerouslyallowallbuilds class=hash-link aria-label="dangerouslyAllowAllBuilds doğrudan bağlantı" title="dangerouslyAllowAllBuilds doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.9.0</p>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>If set to <code>true</code>, all build scripts (e.g. <code>preinstall</code>, <code>install</code>, <code>postinstall</code>) from dependencies will run automatically, without requiring approval.</p>
+<div class="theme-admonition theme-admonition-warning admonition_g_IF alert alert--warning"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>uyarı</div><div class=admonitionContent_e01q><p>This setting allows all dependencies—including transitive ones—to run install scripts, both now and in the future.
+Even if your current dependency graph appears safe:<ul>
+<li>Future updates may introduce new, untrusted dependencies.</li>
+<li>Existing packages may add scripts in later versions.</li>
+<li>Packages can be hijacked or compromised and begin executing malicious code.</li>
+</ul><p>For maximum safety, only enable this if you’re fully aware of the risks and trust the entire ecosystem you’re pulling from. It’s recommended to review and allow builds explicitly.</div></div>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=nodejs-settings>Node.js Settings<a href=#nodejs-settings class=hash-link aria-label="Node.js Settings doğrudan bağlantı" title="Node.js Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=nodeversion>nodeVersion<a href=#nodeversion class=hash-link aria-label="nodeVersion doğrudan bağlantı" title="nodeVersion doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: the value returned by <strong>node -v</strong>, without the v prefix</li>
+<li>Type: <strong>exact semver version (not a range)</strong></li>
+</ul>
+<p>The Node.js version to use when checking a package's <code>engines</code> setting.</p>
+<p>If you want to prevent contributors of your project from adding new incompatible dependencies, use <code>nodeVersion</code> and <code>engineStrict</code> in a <code>pnpm-workspace.yaml</code> file at the root of the project:</p>
+<div class="language-ini codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-ini codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token plain">nodeVersion: 12.22.0</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">engineStrict: true</span><br/></span></code></pre></div></div>
+<p>This way, even if someone is using Node.js v16, they will not be able to install a new dependency that doesn't support Node.js v12.22.0.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=node-mirror>node-mirror<a href=#node-mirror class=hash-link aria-label="node-mirror doğrudan bağlantı" title="node-mirror doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong><code>https://nodejs.org/download/&lt;releaseDir>/</code></strong></li>
+<li>Type: <strong>URL</strong></li>
+</ul>
+<p>Sets the base URL for downloading Node.js. The <code>&lt;releaseDir></code> portion of this setting can be any directory from <a href=https://nodejs.org/download target=_blank rel="noopener noreferrer">https://nodejs.org/download</a>: <code>release</code>, <code>rc</code>, <code>nightly</code>, <code>v8-canary</code>, etc.</p>
+<p>Here is how pnpm may be configured to download Node.js from Node.js mirror in China:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-text codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token plain">node-mirror:release=https://npmmirror.com/mirrors/node/</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">node-mirror:rc=https://npmmirror.com/mirrors/node-rc/</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">node-mirror:nightly=https://npmmirror.com/mirrors/node-nightly/</span><br/></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_VHH3" id=other-settings>Other Settings<a href=#other-settings class=hash-link aria-label="Other Settings doğrudan bağlantı" title="Other Settings doğrudan bağlantı" translate=no>​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=saveprefix>savePrefix<a href=#saveprefix class=hash-link aria-label="savePrefix doğrudan bağlantı" title="savePrefix doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>'^'</strong></li>
+<li>Type: <strong>'^'</strong>, <strong>'~'</strong>, <strong>''</strong></li>
+</ul>
+<p>Configure how versions of packages installed to a <code>package.json</code> file get
+prefixed.</p>
+<p>For example, if a package has version <code>1.2.3</code>, by default its version is set to
+<code>^1.2.3</code> which allows minor upgrades for that package, but after
+<code>pnpm config set save-prefix='~'</code> it would be set to <code>~1.2.3</code> which only allows
+patch upgrades.</p>
+<p>This setting is ignored when the added package has a range specified. For
+instance, <code>pnpm add foo@2</code> will set the version of <code>foo</code> in <code>package.json</code> to
+<code>2</code>, regardless of the value of <code>savePrefix</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=tag>tag<a href=#tag class=hash-link aria-label="tag doğrudan bağlantı" title="tag doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>latest</strong></li>
+<li>Type: <strong>String</strong></li>
+</ul>
+<p>If you <code>pnpm add</code> a package and you don't provide a specific version, then it
+will install the package at the version registered under the tag from this
+setting.</p>
+<p>This also sets the tag that is added to the <code>package@version</code> specified by the
+<code>pnpm tag</code> command if no explicit tag is given.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=globaldir>globalDir<a href=#globaldir class=hash-link aria-label="globalDir doğrudan bağlantı" title="globalDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default:<!-- -->
+<ul>
+<li>If the <strong>$XDG_DATA_HOME</strong> env variable is set, then <strong>$XDG_DATA_HOME/pnpm/global</strong></li>
+<li>On Windows: <strong>~/AppData/Local/pnpm/global</strong></li>
+<li>On macOS: <strong>~/Library/pnpm/global</strong></li>
+<li>On Linux: <strong>~/.local/share/pnpm/global</strong></li>
+</ul>
+</li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>Specify a custom directory to store global packages.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=globalbindir>globalBinDir<a href=#globalbindir class=hash-link aria-label="globalBinDir doğrudan bağlantı" title="globalBinDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default:<!-- -->
+<ul>
+<li>If the <strong>$XDG_DATA_HOME</strong> env variable is set, then <strong>$XDG_DATA_HOME/pnpm/bin</strong></li>
+<li>On Windows: <strong>~/AppData/Local/pnpm/bin</strong></li>
+<li>On macOS: <strong>~/Library/pnpm/bin</strong></li>
+<li>On Linux: <strong>~/.local/share/pnpm/bin</strong></li>
+</ul>
+</li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>Allows to set the target directory for the bin files of globally installed packages.</p>
+<div class="theme-admonition theme-admonition-tip admonition_g_IF alert alert--success"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>ipucu</div><div class=admonitionContent_e01q><p>In pnpm v11, globally installed binaries are stored in a <code>bin</code> subdirectory of <code>PNPM_HOME</code> instead of directly in <code>PNPM_HOME</code>. This prevents internal directories like <code>global/</code> and <code>store/</code> from polluting shell autocompletion when <code>PNPM_HOME</code> is on PATH. After upgrading, run <code>pnpm setup</code> to update your shell configuration.</div></div>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=statedir>stateDir<a href=#statedir class=hash-link aria-label="stateDir doğrudan bağlantı" title="stateDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default:<!-- -->
+<ul>
+<li>If the <strong>$XDG_STATE_HOME</strong> env variable is set, then <strong>$XDG_STATE_HOME/pnpm</strong></li>
+<li>On Windows: <strong>~/AppData/Local/pnpm-state</strong></li>
+<li>On macOS: <strong>~/.pnpm-state</strong></li>
+<li>On Linux: <strong>~/.local/state/pnpm</strong></li>
+</ul>
+</li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>The directory where pnpm creates the <code>pnpm-state.json</code> file that is currently used only by the update checker.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=cachedir>cacheDir<a href=#cachedir class=hash-link aria-label="cacheDir doğrudan bağlantı" title="cacheDir doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default:<!-- -->
+<ul>
+<li>If the <strong>$XDG_CACHE_HOME</strong> env variable is set, then <strong>$XDG_CACHE_HOME/pnpm</strong></li>
+<li>On Windows: <strong>~/AppData/Local/pnpm-cache</strong></li>
+<li>On macOS: <strong>~/Library/Caches/pnpm</strong></li>
+<li>On Linux: <strong>~/.cache/pnpm</strong></li>
+</ul>
+</li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>The location of the cache (package metadata and dlx).</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=usestderr>useStderr<a href=#usestderr class=hash-link aria-label="useStderr doğrudan bağlantı" title="useStderr doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When true, all the output is written to stderr.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=updatenotifier>updateNotifier<a href=#updatenotifier class=hash-link aria-label="updateNotifier doğrudan bağlantı" title="updateNotifier doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Set to <code>false</code> to suppress the update notification when using an older version of pnpm than the latest.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=prefersymlinkedexecutables>preferSymlinkedExecutables<a href=#prefersymlinkedexecutables class=hash-link aria-label="preferSymlinkedExecutables doğrudan bağlantı" title="preferSymlinkedExecutables doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong>, when <strong>node-linker</strong> is set to <strong>hoisted</strong> and the system is POSIX</li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Create symlinks to executables in <code>node_modules/.bin</code> instead of command shims. This setting is ignored on Windows, where only command shims work.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=ignorecompatibilitydb>ignoreCompatibilityDb<a href=#ignorecompatibilitydb class=hash-link aria-label="ignoreCompatibilityDb doğrudan bağlantı" title="ignoreCompatibilityDb doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>During installation the dependencies of some packages are automatically patched. If you want to disable this, set this config to <code>true</code>.</p>
+<p>The patches are applied from Yarn's <a href=https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-extensions/sources/index.ts target=_blank rel="noopener noreferrer"><code>@yarnpkg/extensions</code></a> package.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=resolutionmode>resolutionMode<a href=#resolutionmode class=hash-link aria-label="resolutionMode doğrudan bağlantı" title="resolutionMode doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>highest</strong> (was <strong>lowest-direct</strong> from v8.0.0 to v8.6.12)</li>
+<li>Type: <strong>highest</strong>, <strong>time-based</strong>, <strong>lowest-direct</strong></li>
+</ul>
+<p>When <code>resolutionMode</code> is set to <code>time-based</code>, dependencies will be resolved the following way:</p>
+<ol>
+<li>Direct dependencies will be resolved to their lowest versions. So if there is <code>foo@^1.1.0</code> in the dependencies, then <code>1.1.0</code> will be installed.</li>
+<li>Subdependencies will be resolved from versions that were published before the last direct dependency was published.</li>
+</ol>
+<p>With this resolution mode installations with warm cache are faster. It also reduces the chance of subdependency hijacking as subdependencies will be updated only if direct dependencies are updated.</p>
+<p>This resolution mode works only with npm's <a href=https://github.com/npm/registry/blob/master/docs/responses/package-metadata.md#full-metadata-format target=_blank rel="noopener noreferrer">full metadata</a>. So it is slower in some scenarios. However, if you use <a href=https://verdaccio.org/ target=_blank rel="noopener noreferrer">Verdaccio</a> v5.15.1 or newer, you may set the <code>registrySupportsTimeField</code> setting to <code>true</code>, and it will be really fast.</p>
+<p>When <code>resolutionMode</code> is set to <code>lowest-direct</code>, direct dependencies will be resolved to their lowest versions.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=registrysupportstimefield>registrySupportsTimeField<a href=#registrysupportstimefield class=hash-link aria-label="registrySupportsTimeField doğrudan bağlantı" title="registrySupportsTimeField doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>Set this to <code>true</code> if the registry that you are using returns the "time" field in the abbreviated metadata. As of now, only <a href=https://verdaccio.org/ target=_blank rel="noopener noreferrer">Verdaccio</a> from v5.15.1 supports this.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=extendnodepath>extendNodePath<a href=#extendnodepath class=hash-link aria-label="extendNodePath doğrudan bağlantı" title="extendNodePath doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>true</code>, pnpm sets the <code>NODE_PATH</code> environment variable in command shims
+(the wrapper scripts created in <code>node_modules/.bin</code>). When <code>false</code>, <code>NODE_PATH</code>
+is not set.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=why-this-is-needed>Why this is needed<a href=#why-this-is-needed class=hash-link aria-label="Why this is needed doğrudan bağlantı" title="Why this is needed doğrudan bağlantı" translate=no>​</a></h4>
+<p>pnpm's <a href=/tr/next/symlinked-node-modules-structure>isolated <code>node_modules</code> layout</a> means that a package can only access its
+own declared dependencies. However, when a CLI tool runs via a command shim, some
+libraries (notably <a href=https://github.com/sindresorhus/import-local target=_blank rel="noopener noreferrer"><code>import-local</code></a>, used by jest, eslint, and others) resolve
+modules from the <strong>current working directory</strong> rather than from the binary's own
+location. Since the working directory is the project root — not the package inside
+the virtual store — the standard <code>node_modules</code> resolution from the CWD won't
+find the binary's transitive dependencies.</p>
+<p>To bridge this gap, pnpm includes two types of paths in <code>NODE_PATH</code>:</p>
+<ol>
+<li><strong>The package's own dependencies directory</strong> (e.g.,
+<code>.pnpm/pkg@version/node_modules</code>) — this allows CWD-based resolution to find
+the correct versions of the package's sibling dependencies.</li>
+<li><strong>The hoisted <code>node_modules</code> directory</strong> (e.g., <code>.pnpm/node_modules</code>) — this
+is the directory where hoisted packages are placed when <a href=#hoistpattern><code>hoistPattern</code></a> is
+set. Node.js cannot discover this directory through its standard resolution
+algorithm, so it must be provided via <code>NODE_PATH</code>.</li>
+</ol>
+<p><code>NODE_PATH</code> is also essential when <a href=#enableglobalvirtualstore><code>enableGlobalVirtualStore</code></a> is enabled.
+With a global virtual store, packages are symlinked from a central location
+outside the project, so Node.js's standard upward <code>node_modules</code> traversal from
+the binary's real path won't reach the project's own <code>node_modules</code> or its hoisted
+dependencies. In this case, <code>NODE_PATH</code> must include both the project's root
+<code>node_modules</code> and the hoisted directory at <code>node_modules/.pnpm/node_modules</code> to
+ensure correct resolution.</p>
+<h4 class="anchor anchorWithStickyNavbar_VHH3" id=when-to-disable>When to disable<a href=#when-to-disable class=hash-link aria-label="When to disable doğrudan bağlantı" title="When to disable doğrudan bağlantı" translate=no>​</a></h4>
+<p>You may set this to <code>false</code> if you are certain that none of the CLI tools in your
+project resolve modules from the working directory and you are not using a global
+virtual store. Disabling it produces slightly simpler command shims.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=deployallfiles>deployAllFiles<a href=#deployallfiles class=hash-link aria-label="deployAllFiles doğrudan bağlantı" title="deployAllFiles doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When deploying a package or installing a local package, all files of the package are copied. By default, if the package has a <code>"files"</code> field in the <code>package.json</code>, then only the listed files and directories are copied.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=dedupedirectdeps>dedupeDirectDeps<a href=#dedupedirectdeps class=hash-link aria-label="dedupeDirectDeps doğrudan bağlantı" title="dedupeDirectDeps doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>true</code>, dependencies that are already symlinked to the root <code>node_modules</code> directory of the workspace will not be symlinked to subproject <code>node_modules</code> directories.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=optimisticrepeatinstall>optimisticRepeatInstall<a href=#optimisticrepeatinstall class=hash-link aria-label="optimisticRepeatInstall doğrudan bağlantı" title="optimisticRepeatInstall doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.1.0</p>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When enabled, a fast check will be performed before proceeding to installation. This way a repeat install or an install on a project with everything up-to-date becomes a lot faster.</p>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=requiredscripts>requiredScripts<a href=#requiredscripts class=hash-link aria-label="requiredScripts doğrudan bağlantı" title="requiredScripts doğrudan bağlantı" translate=no>​</a></h3>
+<p>Scripts listed in this array will be required in each project of the workspace. Otherwise, <code>pnpm -r run &lt;script name></code> will fail.</p>
+<div class="language-yaml codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-yaml codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token key atrule" style=color:#00a4db>requiredScripts</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>-</span><span class="token plain"> build</span><br/></span></code></pre></div></div>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=enableprepostscripts>enablePrePostScripts<a href=#enableprepostscripts class=hash-link aria-label="enablePrePostScripts doğrudan bağlantı" title="enablePrePostScripts doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>true</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>true</code>, pnpm will run any pre/post scripts automatically. So running <code>pnpm foo</code>
+will be like running <code>pnpm prefoo && pnpm foo && pnpm postfoo</code>.</p>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=scriptshell>scriptShell<a href=#scriptshell class=hash-link aria-label="scriptShell doğrudan bağlantı" title="scriptShell doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>null</strong></li>
+<li>Type: <strong>path</strong></li>
+</ul>
+<p>The shell to use for scripts run with the <code>pnpm run</code> command.</p>
+<p>For instance, to force usage of Git Bash on Windows:</p>
+<div class="language-text codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-text codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token plain">pnpm config set scriptShell "C:\\Program Files\\git\\bin\\bash.exe"</span><br/></span></code></pre></div></div>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=shellemulator>shellEmulator<a href=#shellemulator class=hash-link aria-label="shellEmulator doğrudan bağlantı" title="shellEmulator doğrudan bağlantı" translate=no>​</a></h3>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When <code>true</code>, pnpm will use a JavaScript implementation of a <a href=https://www.npmjs.com/package/@yarnpkg/shell target=_blank rel="noopener noreferrer">bash-like shell</a> to
+execute scripts.</p>
+<p>This option simplifies cross-platform scripting. For instance, by default, the
+next script will fail on non-POSIX-compliant systems:</p>
+<div class="language-json codeBlockContainer_pbKI theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_cWnm><pre tabindex=0 class="prism-code language-json codeBlock_dUJW thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_wqoa><span class=token-line style=color:#393A34><span class="token property" style=color:#36acaa>"scripts"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">  </span><span class="token property" style=color:#36acaa>"test"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"NODE_ENV=test node test.js"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></span></code></pre></div></div>
+<p>But if the <code>shellEmulator</code> setting is set to <code>true</code>, it will work on all
+platforms.</p>
+<div class="theme-admonition theme-admonition-note admonition_g_IF alert alert--secondary"><div class=admonitionHeading_Ll6V><span class=admonitionIcon_pyky><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>not</div><div class=admonitionContent_e01q><p>Node.js 22 or higher supports running scripts without pnpm's assistance. For the example above, you can run the <code>test</code> script with <code>node --run test</code>. However, the <code>shellEmulator</code> option has no effect on this. Scripts that depend on POSIX features are required to be run <code>pnpm run</code> instead of <code>node --run</code> to work in non-POSIX-compliant environments.</div></div>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=catalogmode>catalogMode<a href=#catalogmode class=hash-link aria-label="catalogMode doğrudan bağlantı" title="catalogMode doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.12.1</p>
+<ul>
+<li>Default: <strong>manual</strong></li>
+<li>Type: <strong>manual</strong>, <strong>strict</strong>, <strong>prefer</strong></li>
+</ul>
+<p>Controls if and how dependencies are added to the default catalog, when running <code>pnpm add</code>. There are three modes:</p>
+<ul>
+<li><strong>strict</strong> - only allows dependency versions from the catalog. Adding a dependency outside the catalog's version range will cause an error.</li>
+<li><strong>prefer</strong> - prefers catalog versions, but will fall back to direct dependencies if no compatible version is found.</li>
+<li><strong>manual</strong> (default) - does not automatically add dependencies to the catalog.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=ci>ci<a href=#ci class=hash-link aria-label="ci doğrudan bağlantı" title="ci doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.12.1</p>
+<ul>
+<li>Default: <strong>true</strong> (when the environment is detected as CI)</li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>This setting explicitly tells pnpm whether the current environment is a CI (Continuous Integration) environment.</p>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_VHH3" id=cleanupunusedcatalogs>cleanupUnusedCatalogs<a href=#cleanupunusedcatalogs class=hash-link aria-label="cleanupUnusedCatalogs doğrudan bağlantı" title="cleanupUnusedCatalogs doğrudan bağlantı" translate=no>​</a></h3>
+<p>Added in: v10.15.0</p>
+<ul>
+<li>Default: <strong>false</strong></li>
+<li>Type: <strong>Boolean</strong></li>
+</ul>
+<p>When set to <code>true</code>, pnpm will remove unused catalog entries during installation.</p><script src=//m.servedby-buysellads.com/monetization.custom.js></script><script>"undefined"!=typeof _bsa&&_bsa&&_bsa.init("custom","CWYI4K7E","placement:pnpmio",{target:"#bsa-custom-01",template:`
+<a href="##link##" class="native-banner" style="background: ##backgroundColor##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+<img class="native-img" width="125" src="##logo##" />
+<div class="native-main">
+  <div class="native-details" style="
+      color: ##textColor##;
+      border-left: solid 1px ##textColor##;
+    ">
+    <span class="native-desc">##description##</span>
+  </div>
+  <span class="native-cta" style="
+      color: ##ctaTextColor##;
+      background-color: ##ctaBackgroundColor##;
+    ">##callToAction##</span>
+</div>
+</a>
+`})</script></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://translate.pnpm.io/project/pnpm/tr target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_YF2E aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Bu sayfayı düzenle</a></div><div class="col lastUpdated_XOP4"><span class=theme-last-updated>En son <!-- --> <b><time datetime=2026-03-27T10:35:12.000Z itemprop=dateModified>27 Mar 2026</time></b> tarihinde<!-- --> <!-- --> <b>github-actions[bot]</b> tarafından<!-- --> güncellendi</span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Dokümanlar sayfası"><a class="pagination-nav__link pagination-nav__link--prev" href=/tr/next/package_json><div class=pagination-nav__sublabel>Önceki</div><div class=pagination-nav__label>package.json</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/tr/next/npmrc><div class=pagination-nav__sublabel>Sonraki</div><div class=pagination-nav__label>Auth & Registry Settings (.npmrc)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_rASn thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#dependency-resolution class="table-of-contents__link toc-highlight">Dependency Resolution</a><ul><li><a href=#overrides class="table-of-contents__link toc-highlight">overrides</a><li><a href=#packageextensions class="table-of-contents__link toc-highlight">packageExtensions</a><li><a href=#alloweddeprecatedversions class="table-of-contents__link toc-highlight">allowedDeprecatedVersions</a><li><a href=#updateconfig class="table-of-contents__link toc-highlight">updateConfig</a><li><a href=#supportedarchitectures class="table-of-contents__link toc-highlight">supportedArchitectures</a><li><a href=#ignoredoptionaldependencies class="table-of-contents__link toc-highlight">ignoredOptionalDependencies</a><li><a href=#minimumreleaseage class="table-of-contents__link toc-highlight">minimumReleaseAge</a><li><a href=#minimumreleaseageexclude class="table-of-contents__link toc-highlight">minimumReleaseAgeExclude</a><li><a href=#trustpolicy class="table-of-contents__link toc-highlight">trustPolicy</a><li><a href=#trustpolicyexclude class="table-of-contents__link toc-highlight">trustPolicyExclude</a><li><a href=#trustpolicyignoreafter class="table-of-contents__link toc-highlight">trustPolicyIgnoreAfter</a><li><a href=#blockexoticsubdeps class="table-of-contents__link toc-highlight">blockExoticSubdeps</a></ul><li><a href=#dependency-hoisting-settings class="table-of-contents__link toc-highlight">Dependency Hoisting Settings</a><ul><li><a href=#hoist class="table-of-contents__link toc-highlight">hoist</a><li><a href=#hoistworkspacepackages class="table-of-contents__link toc-highlight">hoistWorkspacePackages</a><li><a href=#hoistpattern class="table-of-contents__link toc-highlight">hoistPattern</a><li><a href=#publichoistpattern class="table-of-contents__link toc-highlight">publicHoistPattern</a><li><a href=#shamefullyhoist class="table-of-contents__link toc-highlight">shamefullyHoist</a></ul><li><a href=#node-modules-settings class="table-of-contents__link toc-highlight">Node-Modules Settings</a><ul><li><a href=#modulesdir class="table-of-contents__link toc-highlight">modulesDir</a><li><a href=#nodelinker class="table-of-contents__link toc-highlight">nodeLinker</a><li><a href=#symlink class="table-of-contents__link toc-highlight">symlink</a><li><a href=#enablemodulesdir class="table-of-contents__link toc-highlight">enableModulesDir</a><li><a href=#virtualstoredir class="table-of-contents__link toc-highlight">virtualStoreDir</a><li><a href=#virtualstoredirmaxlength class="table-of-contents__link toc-highlight">virtualStoreDirMaxLength</a><li><a href=#virtualstoreonly class="table-of-contents__link toc-highlight">virtualStoreOnly</a><li><a href=#packageimportmethod class="table-of-contents__link toc-highlight">packageImportMethod</a><li><a href=#modulescachemaxage class="table-of-contents__link toc-highlight">modulesCacheMaxAge</a><li><a href=#dlxcachemaxage class="table-of-contents__link toc-highlight">dlxCacheMaxAge</a><li><a href=#enableglobalvirtualstore class="table-of-contents__link toc-highlight">enableGlobalVirtualStore</a></ul><li><a href=#store-settings class="table-of-contents__link toc-highlight">Store Settings</a><ul><li><a href=#storedir class="table-of-contents__link toc-highlight">storeDir</a><li><a href=#verifystoreintegrity class="table-of-contents__link toc-highlight">verifyStoreIntegrity</a><li><a href=#userunningstoreserver class="table-of-contents__link toc-highlight">useRunningStoreServer</a><li><a href=#strictstorepkgcontentcheck class="table-of-contents__link toc-highlight">strictStorePkgContentCheck</a></ul><li><a href=#lockfile-settings class="table-of-contents__link toc-highlight">Lockfile Settings</a><ul><li><a href=#lockfile class="table-of-contents__link toc-highlight">lockfile</a><li><a href=#preferfrozenlockfile class="table-of-contents__link toc-highlight">preferFrozenLockfile</a><li><a href=#lockfileincludetarballurl class="table-of-contents__link toc-highlight">lockfileIncludeTarballUrl</a><li><a href=#gitbranchlockfile class="table-of-contents__link toc-highlight">gitBranchLockfile</a><li><a href=#mergegitbranchlockfilesbranchpattern class="table-of-contents__link toc-highlight">mergeGitBranchLockfilesBranchPattern</a><li><a href=#peerssuffixmaxlength class="table-of-contents__link toc-highlight">peersSuffixMaxLength</a></ul><li><a href=#request-settings class="table-of-contents__link toc-highlight">Request Settings</a><ul><li><a href=#gitshallowhosts class="table-of-contents__link toc-highlight">gitShallowHosts</a><li><a href=#networkconcurrency class="table-of-contents__link toc-highlight">networkConcurrency</a><li><a href=#fetchretries class="table-of-contents__link toc-highlight">fetchRetries</a><li><a href=#fetchretryfactor class="table-of-contents__link toc-highlight">fetchRetryFactor</a><li><a href=#fetchretrymintimeout class="table-of-contents__link toc-highlight">fetchRetryMintimeout</a><li><a href=#fetchretrymaxtimeout class="table-of-contents__link toc-highlight">fetchRetryMaxtimeout</a><li><a href=#fetchtimeout class="table-of-contents__link toc-highlight">fetchTimeout</a><li><a href=#fetchwarntimeoutms class="table-of-contents__link toc-highlight">fetchWarnTimeoutMs</a><li><a href=#fetchminspeedkibps class="table-of-contents__link toc-highlight">fetchMinSpeedKiBps</a></ul><li><a href=#peer-dependency-settings class="table-of-contents__link toc-highlight">Peer Dependency Settings</a><ul><li><a href=#autoinstallpeers class="table-of-contents__link toc-highlight">autoInstallPeers</a><li><a href=#dedupepeerdependents class="table-of-contents__link toc-highlight">dedupePeerDependents</a><li><a href=#strictpeerdependencies class="table-of-contents__link toc-highlight">strictPeerDependencies</a><li><a href=#resolvepeersfromworkspaceroot class="table-of-contents__link toc-highlight">resolvePeersFromWorkspaceRoot</a><li><a href=#peerdependencyrules class="table-of-contents__link toc-highlight">peerDependencyRules</a></ul><li><a href=#cli-settings class="table-of-contents__link toc-highlight">CLI Settings</a><ul><li><a href=#no-color class="table-of-contents__link toc-highlight">[no-]color</a><li><a href=#loglevel class="table-of-contents__link toc-highlight">loglevel</a><li><a href=#usebetacli class="table-of-contents__link toc-highlight">useBetaCli</a><li><a href=#recursiveinstall class="table-of-contents__link toc-highlight">recursiveInstall</a><li><a href=#enginestrict class="table-of-contents__link toc-highlight">engineStrict</a><li><a href=#npmpath class="table-of-contents__link toc-highlight">npmPath</a><li><a href=#packagemanagerstrict class="table-of-contents__link toc-highlight">packageManagerStrict</a><li><a href=#packagemanagerstrictversion class="table-of-contents__link toc-highlight">packageManagerStrictVersion</a><li><a href=#managepackagemanagerversions class="table-of-contents__link toc-highlight">managePackageManagerVersions</a></ul><li><a href=#build-settings class="table-of-contents__link toc-highlight">Build Settings</a><ul><li><a href=#ignorescripts class="table-of-contents__link toc-highlight">ignoreScripts</a><li><a href=#ignoredepscripts class="table-of-contents__link toc-highlight">ignoreDepScripts</a><li><a href=#childconcurrency class="table-of-contents__link toc-highlight">childConcurrency</a><li><a href=#sideeffectscache class="table-of-contents__link toc-highlight">sideEffectsCache</a><li><a href=#sideeffectscachereadonly class="table-of-contents__link toc-highlight">sideEffectsCacheReadonly</a><li><a href=#unsafeperm class="table-of-contents__link toc-highlight">unsafePerm</a><li><a href=#nodeoptions class="table-of-contents__link toc-highlight">nodeOptions</a><li><a href=#verifydepsbeforerun class="table-of-contents__link toc-highlight">verifyDepsBeforeRun</a><li><a href=#strictdepbuilds class="table-of-contents__link toc-highlight">strictDepBuilds</a><li><a href=#allowbuilds class="table-of-contents__link toc-highlight">allowBuilds</a><li><a href=#dangerouslyallowallbuilds class="table-of-contents__link toc-highlight">dangerouslyAllowAllBuilds</a></ul><li><a href=#nodejs-settings class="table-of-contents__link toc-highlight">Node.js Settings</a><ul><li><a href=#nodeversion class="table-of-contents__link toc-highlight">nodeVersion</a><li><a href=#node-mirror class="table-of-contents__link toc-highlight">node-mirror</a></ul><li><a href=#other-settings class="table-of-contents__link toc-highlight">Other Settings</a><ul><li><a href=#saveprefix class="table-of-contents__link toc-highlight">savePrefix</a><li><a href=#tag class="table-of-contents__link toc-highlight">tag</a><li><a href=#globaldir class="table-of-contents__link toc-highlight">globalDir</a><li><a href=#globalbindir class="table-of-contents__link toc-highlight">globalBinDir</a><li><a href=#statedir class="table-of-contents__link toc-highlight">stateDir</a><li><a href=#cachedir class="table-of-contents__link toc-highlight">cacheDir</a><li><a href=#usestderr class="table-of-contents__link toc-highlight">useStderr</a><li><a href=#updatenotifier class="table-of-contents__link toc-highlight">updateNotifier</a><li><a href=#prefersymlinkedexecutables class="table-of-contents__link toc-highlight">preferSymlinkedExecutables</a><li><a href=#ignorecompatibilitydb class="table-of-contents__link toc-highlight">ignoreCompatibilityDb</a><li><a href=#resolutionmode class="table-of-contents__link toc-highlight">resolutionMode</a><li><a href=#registrysupportstimefield class="table-of-contents__link toc-highlight">registrySupportsTimeField</a><li><a href=#extendnodepath class="table-of-contents__link toc-highlight">extendNodePath</a><li><a href=#deployallfiles class="table-of-contents__link toc-highlight">deployAllFiles</a><li><a href=#dedupedirectdeps class="table-of-contents__link toc-highlight">dedupeDirectDeps</a><li><a href=#optimisticrepeatinstall class="table-of-contents__link toc-highlight">optimisticRepeatInstall</a><li><a href=#requiredscripts class="table-of-contents__link toc-highlight">requiredScripts</a><li><a href=#enableprepostscripts class="table-of-contents__link toc-highlight">enablePrePostScripts</a><li><a href=#scriptshell class="table-of-contents__link toc-highlight">scriptShell</a><li><a href=#shellemulator class="table-of-contents__link toc-highlight">shellEmulator</a><li><a href=#catalogmode class="table-of-contents__link toc-highlight">catalogMode</a><li><a href=#ci class="table-of-contents__link toc-highlight">ci</a><li><a href=#cleanupunusedcatalogs class="table-of-contents__link toc-highlight">cleanupUnusedCatalogs</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Docs</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/tr/installation>Getting Started</a><li class=footer__item><a class=footer__link-item href=/tr/pnpm-cli>pnpm CLI</a><li class=footer__item><a class=footer__link-item href=/tr/workspaces>Workspace</a><li class=footer__item><a class=footer__link-item href=/tr/settings>Settings (pnpm-workspace.yaml)</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Community</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://x.com/pnpmjs target=_blank rel="noopener noreferrer" class=footer__link-item>X (Twitter)<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://www.youtube.com/@pnpmjs target=_blank rel="noopener noreferrer" class=footer__link-item>YouTube<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://reddit.com/r/pnpm/ target=_blank rel="noopener noreferrer" class=footer__link-item>Reddit<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://bsky.app/profile/pnpm.io target=_blank rel="noopener noreferrer" class=footer__link-item>Bluesky<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Contributing</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/pnpm/pnpm target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://translate.pnpm.io target=_blank rel="noopener noreferrer" class=footer__link-item>Help Us Translate<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_dO1m><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=margin-bottom--sm><img src=/tr/img/pnpm-light.svg class="footer__logo themedComponent_JL_G themedComponent--light_t756"/><img src=/tr/img/pnpm-light.svg class="footer__logo themedComponent_JL_G themedComponent--dark_Y66J"/></div><div class=footer__copyright>Copyright © 2015-2026 contributors of pnpm</div></div></div></footer></div></body>

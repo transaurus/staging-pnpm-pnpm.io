@@ -1,0 +1,66 @@
+{
+  "version.label": {
+    "message": "10.x",
+    "description": "The label for version 10.x"
+  },
+  "sidebar.docs.category.Introduction": {
+    "message": "Introduction",
+    "description": "The label for category Introduction in sidebar docs"
+  },
+  "sidebar.docs.category.Usage": {
+    "message": "Usage",
+    "description": "The label for category Usage in sidebar docs"
+  },
+  "sidebar.docs.category.CLI commands": {
+    "message": "CLI commands",
+    "description": "The label for category CLI commands in sidebar docs"
+  },
+  "sidebar.docs.category.Manage dependencies": {
+    "message": "Manage dependencies",
+    "description": "The label for category Manage dependencies in sidebar docs"
+  },
+  "sidebar.docs.category.Patch dependencies": {
+    "message": "Patch dependencies",
+    "description": "The label for category Patch dependencies in sidebar docs"
+  },
+  "sidebar.docs.category.Review dependencies": {
+    "message": "Review dependencies",
+    "description": "The label for category Review dependencies in sidebar docs"
+  },
+  "sidebar.docs.category.Run scripts": {
+    "message": "Run scripts",
+    "description": "The label for category Run scripts in sidebar docs"
+  },
+  "sidebar.docs.category.Manage environments": {
+    "message": "Manage environments",
+    "description": "The label for category Manage environments in sidebar docs"
+  },
+  "sidebar.docs.category.Inspect the store": {
+    "message": "Inspect the store",
+    "description": "The label for category Inspect the store in sidebar docs"
+  },
+  "sidebar.docs.category.Manage cache": {
+    "message": "Manage cache",
+    "description": "The label for category Manage cache in sidebar docs"
+  },
+  "sidebar.docs.category.Misc.": {
+    "message": "Misc.",
+    "description": "The label for category Misc. in sidebar docs"
+  },
+  "sidebar.docs.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar docs"
+  },
+  "sidebar.docs.category.Features": {
+    "message": "Features",
+    "description": "The label for category Features in sidebar docs"
+  },
+  "sidebar.docs.category.Recipes": {
+    "message": "Recipes",
+    "description": "The label for category Recipes in sidebar docs"
+  },
+  "sidebar.docs.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category Advanced in sidebar docs"
+  }
+}

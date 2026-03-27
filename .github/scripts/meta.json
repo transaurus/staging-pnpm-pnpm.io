@@ -1,0 +1,10 @@
+{
+  "sourceUrl": "https://github.com/pnpm/pnpm.io",
+  "branch": "main",
+  "docusaurusRoot": ".",
+  "configFile": "docusaurus.config.ts",
+  "translateCommand": "pnpm run write-translations",
+  "buildCommand": "pnpm run build",
+  "buildOutput": "build",
+  "packageManager": "pnpm"
+}
